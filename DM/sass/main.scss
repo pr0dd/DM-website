@@ -1,0 +1,22 @@
+@import "mixins.scss";
+
+/*STICKY FOOTER*/
+.wrapper {
+	min-height: 100%;
+	margin: 0 auto -400px;
+	@include bp-medium {margin-bottom:-100px;} 
+}
+footer, .push {
+	height: 400px;
+	@include bp-medium {height:100px;}  
+}
+
+/*GENERIC STYLES*/
+a {text-decoration: none;}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/*HEADER*/
