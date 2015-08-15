@@ -3,11 +3,11 @@
 /*STICKY FOOTER*/
 .wrapper {
 	min-height: 100%;
-	margin: 0 auto -400px;
+	margin: 0 auto -200px;
 	@include bp-medium {margin-bottom:-100px;} 
 }
 footer, .push {
-	height: 400px;
+	height: 200px;
 	@include bp-medium {height:100px;}  
 }
 
@@ -18,5 +18,107 @@ ul {
 	padding: 0;
 	list-style: none;
 }
-
+.container {
+	min-width:300px;
+	//max-width: 860px;
+	@include bp-medium {width:94%;}
+	@include bp-large {width:60%;}
+}
 /*HEADER*/
+header {
+	background-color: #000;
+	border-bottom:2px solid #fff;
+	color: #eee;
+	//Dynamic content styles:
+	.container {
+		padding:0 15px 5px;
+		@extend %clearfix;
+		.logo {
+			position:relative;
+			@extend %clearfix;
+			@include bp-large {
+				float:left;
+				width: 43%;
+			}
+			a {
+				float:left;
+				color: #eee;
+				margin-top: 25px;
+				font-weight: bold;
+			}
+			.lower {
+				margin: 60px 0 0 10px;
+			}
+			button {
+				position: absolute;
+				top:10px;
+				right:0;
+				border:2px solid #fff;
+				color:#fff;
+				background-color:#000;
+				@include border-radius;
+				@include transition(.2s ease all);
+				&:hover{@include opacity(0.80);}
+				@include bp-medium {display:none;}
+			}
+		}
+		.topmenu {
+			@extend %clearfix;
+			@include bp-large {
+				float:left;
+				width: 57%;
+			}
+			li {
+				@extend %clearfix;
+				float:left;
+				width:100%;
+				position:relative;
+				@include bp-medium {
+					width:20%;
+					margin-top: 10px;
+				}
+				@include bp-large {margin-top:57px}
+				a {
+					display: block;
+					width:100%;
+					color: #eee;
+					text-align: center;
+					border-bottom:1px solid #eee;
+					padding:3px 0;
+					@include transition(.4s ease all);
+					@include bp-medium{border:none;}
+					&:hover {
+						color:#D52B1E;
+					}
+				}
+				button {
+					position:absolute;
+					top:0;
+					right:0;
+					height: 27px;
+					color:#fff;
+					border:0px solid #000;
+					background-color:#000;
+					@include bp-medium{
+						display: none;
+					}
+				}
+				ul {
+					display: none;
+					@include bp-medium {
+						@include opacity(0);
+						@include transition(.5s ease all);
+						display: block;
+					}
+					li {
+						width:100%;
+						margin-top:0;
+					}
+				}
+				&:hover ul {
+					@include opacity(1);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,143 @@
+header .container, header .container .logo, header .container .topmenu, header .container .topmenu li {
+  *zoom: 1; }
+  header .container:before, header .container .logo:before, header .container .topmenu:before, header .container .topmenu li:before, header .container:after, header .container .logo:after, header .container .topmenu:after, header .container .topmenu li:after {
+    content: " ";
+    display: table; }
+  header .container:after, header .container .logo:after, header .container .topmenu:after, header .container .topmenu li:after {
+    clear: both; }
+
+/*STICKY FOOTER*/
+.wrapper {
+  min-height: 100%;
+  margin: 0 auto -200px; }
+  @media only screen and (min-width: 601px) {
+    .wrapper {
+      margin-bottom: -100px; } }
+
+footer, .push {
+  height: 200px; }
+  @media only screen and (min-width: 601px) {
+    footer, .push {
+      height: 100px; } }
+
+/*GENERIC STYLES*/
+a {
+  text-decoration: none; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.container {
+  min-width: 300px; }
+  @media only screen and (min-width: 601px) {
+    .container {
+      width: 94%; } }
+  @media only screen and (min-width: 990px) {
+    .container {
+      width: 60%; } }
+
+/*HEADER*/
+header {
+  background-color: #000;
+  border-bottom: 2px solid #fff;
+  color: #eee; }
+  header .container {
+    padding: 0 15px 5px; }
+    header .container .logo {
+      position: relative; }
+      @media only screen and (min-width: 990px) {
+        header .container .logo {
+          float: left;
+          width: 43%; } }
+      header .container .logo a {
+        float: left;
+        color: #eee;
+        margin-top: 25px;
+        font-weight: bold; }
+      header .container .logo .lower {
+        margin: 60px 0 0 10px; }
+      header .container .logo button {
+        position: absolute;
+        top: 10px;
+        right: 0;
+        border: 2px solid #fff;
+        color: #fff;
+        background-color: #000;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -ms-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -ms-transition: 0.2s ease all;
+        -o-transition: 0.2s ease all;
+        transition: 0.2s ease all; }
+        header .container .logo button:hover {
+          opacity: 0.8;
+          filter: alpha(opacity=80); }
+        @media only screen and (min-width: 601px) {
+          header .container .logo button {
+            display: none; } }
+    @media only screen and (min-width: 990px) {
+      header .container .topmenu {
+        float: left;
+        width: 57%; } }
+    header .container .topmenu li {
+      float: left;
+      width: 100%;
+      position: relative; }
+      @media only screen and (min-width: 601px) {
+        header .container .topmenu li {
+          width: 20%;
+          margin-top: 10px; } }
+      @media only screen and (min-width: 990px) {
+        header .container .topmenu li {
+          margin-top: 57px; } }
+      header .container .topmenu li a {
+        display: block;
+        width: 100%;
+        color: #eee;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+        padding: 3px 0;
+        -webkit-transition: 0.4s ease all;
+        -moz-transition: 0.4s ease all;
+        -ms-transition: 0.4s ease all;
+        -o-transition: 0.4s ease all;
+        transition: 0.4s ease all; }
+        @media only screen and (min-width: 601px) {
+          header .container .topmenu li a {
+            border: none; } }
+        header .container .topmenu li a:hover {
+          color: #D52B1E; }
+      header .container .topmenu li button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 27px;
+        color: #fff;
+        border: 0px solid #000;
+        background-color: #000; }
+        @media only screen and (min-width: 601px) {
+          header .container .topmenu li button {
+            display: none; } }
+      header .container .topmenu li ul {
+        display: none; }
+        @media only screen and (min-width: 601px) {
+          header .container .topmenu li ul {
+            opacity: 0;
+            filter: alpha(opacity=0);
+            -webkit-transition: 0.5s ease all;
+            -moz-transition: 0.5s ease all;
+            -ms-transition: 0.5s ease all;
+            -o-transition: 0.5s ease all;
+            transition: 0.5s ease all;
+            display: block; } }
+        header .container .topmenu li ul li {
+          width: 100%;
+          margin-top: 0; }
+      header .container .topmenu li:hover ul {
+        opacity: 1;
+        filter: alpha(opacity=100); }

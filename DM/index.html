@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
   <title>Digital Marketing - Home</title>
   <!--[if lt IE 9]>
@@ -16,18 +16,21 @@
 </head>
 <body>
   <div class="wrapper">
+  	<header class="row" ng-include="'partials/header.html'"></header>
   	
-
-
+  	<div class="view row" ng-view></div>
   
   	<div class="push"></div>
   </div>
-  <footer></footer>
+  <footer class="row" ng-include="'partials/footer.html'"></footer>
 
   <script src="js/jquery-1.11.3.min.js"></script>
   <script src="js/angular.min.js"></script>
   <script src="js/angular-route.min.js"></script>
   <script src="js/angular-animate.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/directives.js"></script>
+  <script src="js/controllers.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
