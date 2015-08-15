@@ -3,12 +3,12 @@
 /*STICKY FOOTER*/
 .wrapper {
 	min-height: 100%;
-	margin: 0 auto -200px;
-	@include bp-medium {margin-bottom:-100px;} 
+	margin: 0 auto -548px;
+	@include bp-medium {margin-bottom:-303px;} 
 }
 footer, .push {
-	height: 200px;
-	@include bp-medium {height:100px;}  
+	height: 548px;
+	@include bp-medium {height:303px;}  
 }
 
 /*GENERIC STYLES*/
@@ -19,11 +19,13 @@ ul {
 	list-style: none;
 }
 .container {
+	@extend %clearfix;
 	min-width:300px;
 	//max-width: 860px;
 	@include bp-medium {width:94%;}
 	@include bp-large {width:60%;}
 }
+
 /*HEADER*/
 header {
 	background-color: #000;
@@ -32,7 +34,6 @@ header {
 	//Dynamic content styles:
 	.container {
 		padding:0 15px 5px;
-		@extend %clearfix;
 		.logo {
 			position:relative;
 			@extend %clearfix;
@@ -56,6 +57,7 @@ header {
 				border:2px solid #fff;
 				color:#fff;
 				background-color:#000;
+				outline: none;
 				@include border-radius;
 				@include transition(.2s ease all);
 				&:hover{@include opacity(0.80);}
@@ -99,6 +101,7 @@ header {
 					color:#fff;
 					border:0px solid #000;
 					background-color:#000;
+					outline: none;
 					@include bp-medium{
 						display: none;
 					}
@@ -118,6 +121,53 @@ header {
 				&:hover ul {
 					@include opacity(1);
 				}
+			}
+		}
+	}
+}
+
+/*FOOTER*/
+footer {
+	background-color: #000;
+	border-top:2px solid #D52B1E;
+	color: #eee;
+	.container {
+		padding: 0 15px 15px;
+		.address, .clients {
+			@include bp-medium {
+				width:50%;
+				float:left;
+			}
+			a {
+				&:hover {@include opacity(0.6)}
+			}
+		}
+		.clients {
+			@extend %clearfix;
+			div {
+				width:275px;
+				@include bp-medium {float:right;}
+				@include bp-xmedium {width:360px;}
+				@include bp-large {width:275px;}
+				@include bp-xlarge {width:360px;}
+			}
+			a.hide {
+				display:none;
+				@include bp-xmedium {display:inline-block;}
+				@include bp-large {display:none;}
+				@include bp-xlarge {display:inline-block;}
+			}
+		}
+	}
+	.btm-line {
+		background-color: #404040;
+		padding:7px 0;
+		.container {
+			padding: 0 15px;
+			p {
+				text-align: center;
+				margin:0;
+				font-size: 80%;
 			}
 		}
 	}
