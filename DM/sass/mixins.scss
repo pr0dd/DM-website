@@ -35,11 +35,11 @@
   }
 }
 
-// @mixin bp-small {
-//   @media only screen and (min-width: 400px) {
-//     @content;
-//   }
-// }
+@mixin bp-small {
+  @media only screen and (min-width: 400px) {
+    @content;
+  }
+}
 
 //Transitions
 @mixin transition($args...) {

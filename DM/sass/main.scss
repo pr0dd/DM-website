@@ -25,6 +25,7 @@ ul {
 	//max-width: 860px;
 	@include bp-medium {width:94%;}
 	@include bp-large {width:60%;}
+	padding:0 15px;
 }
 
 /*HEADER*/
@@ -40,7 +41,7 @@ header {
 			@extend %clearfix;
 			@include bp-large {
 				float:left;
-				width: 43%;
+				width: 44%;
 			}
 			a {
 				float:left;
@@ -69,7 +70,7 @@ header {
 			@extend %clearfix;
 			@include bp-large {
 				float:left;
-				width: 57%;
+				width: 56%;
 			}
 			li {
 				@extend %clearfix;
@@ -209,11 +210,73 @@ section.view-holder {
 	//End of Angular's animation
 
 	.view {
-		.home,.services,.work,.about,.contacts,.blog {
-			//some styles..
-		}
 		.home {
 			background-color: #FFFFB9;
+			.monitor {
+				background-color:#D52B1E;
+				.container {
+					padding-top:5px;
+					@include bp-medium {padding-top:50px;}
+					//outline: 1px solid green;
+					.slide-holder {
+						width: 100%;
+						margin: 0 auto;
+						padding:17px 18px 80px;
+						//outline: 1px solid grey;
+						background:url(../images/monitor.png) no-repeat 0 0;
+						background-size:100% 100%;
+						@include bp-small {width:90%;}
+						@include bp-medium {width:50%; float:left;}
+						@include bp-large {width:40%;}
+						.slider {
+							width: 100%;						
+							overflow: hidden;
+							//outline: 1px solid red;
+							.move {
+								width:500%;
+								@extend %clearfix;
+								margin: 0;
+								//outline: 1px solid blue;
+								img {
+									float:left;
+									width: 20%;
+									height: auto;			
+								}
+							}
+						}
+					}
+					.heading {
+						//outline: 1px solid grey;
+						padding: 10px 0 20px;
+						text-align: center;						
+						color:#eee;
+						@include bp-medium {
+							width:50%; 
+							float:right;
+							padding-left:40px;
+							text-align: left;
+						}
+						@include bp-large {width:60%;}
+						@include bp-xlarge {padding-left:80px;}
+						h1 {
+							margin-top:0; 
+							font-weight: bold;
+							@include bp-medium {font-size:42px;margin-bottom:40px;}
+							@include bp-xlarge {font-size:48px;}
+						}
+						a {
+							color: #eee;
+							padding:10px 20px;
+							background-color:#000;
+							@include transition(.5s ease all);
+							&:hover {
+								background-color: #fff;
+								color:#000;
+							}
+						}
+					}
+				}
+			}
 		}
 		.services {
 			background-color: #D0E69C;
