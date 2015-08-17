@@ -50,6 +50,15 @@
   transition: $args;
 }
 
+//Transform
+@mixin transform($args...) {
+  -webkit-transform: $args;
+  -moz-transform: $args;
+  -ms-transform: $args;
+  -o-transform: $args;
+  transform: $args;
+}
+
 //Cross browser opacity
 @mixin opacity($opacity) {
   opacity: $opacity;

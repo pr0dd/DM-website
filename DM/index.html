@@ -18,8 +18,10 @@
   <div class="wrapper">
   	<header class="row" ng-include="'partials/header.html'"></header>
   	
-  	<div class="view row" ng-view></div>
-  
+  	<section class="view-holder row">
+  		<div class="view row" ng-view></div>
+  	</section>
+  	
   	<div class="push"></div>
   </div>
   <footer class="row" ng-include="'partials/footer.html'"></footer>

@@ -21,6 +21,9 @@ footer, .push {
       height: 303px; } }
 
 /*GENERIC STYLES*/
+body {
+  overflow-x: hidden; }
+
 a {
   text-decoration: none; }
 
@@ -192,3 +195,48 @@ footer {
         text-align: center;
         margin: 0;
         font-size: 80%; }
+
+/*PARTIALS*/
+section.view-holder {
+  position: relative; }
+  section.view-holder .view.ng-enter, section.view-holder .view.ng-leave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0; }
+  section.view-holder .view.ng-enter {
+    -webkit-transition: 0.95s ease all;
+    -moz-transition: 0.95s ease all;
+    -ms-transition: 0.95s ease all;
+    -o-transition: 0.95s ease all;
+    transition: 0.95s ease all;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    z-index: 100; }
+  section.view-holder .view.ng-enter.ng-enter-active {
+    opacity: 1;
+    filter: alpha(opacity=100); }
+  section.view-holder .view.ng-leave {
+    -webkit-transition: 0.95s ease all;
+    -moz-transition: 0.95s ease all;
+    -ms-transition: 0.95s ease all;
+    -o-transition: 0.95s ease all;
+    transition: 0.95s ease all;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    z-index: 99; }
+  section.view-holder .view.ng-leave.ng-leave-active {
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  section.view-holder .view .home {
+    background-color: #FFFFB9; }
+  section.view-holder .view .services {
+    background-color: #D0E69C; }
+  section.view-holder .view .work {
+    background-color: #80CBC4; }
+  section.view-holder .view .about {
+    background-color: #FFCC80; }
+  section.view-holder .view .contacts {
+    background-color: #BCAAA4; }
+  section.view-holder .view .blog {
+    background-color: #C5CAE9; }

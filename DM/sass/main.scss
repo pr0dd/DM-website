@@ -12,6 +12,7 @@ footer, .push {
 }
 
 /*GENERIC STYLES*/
+body {overflow-x:hidden;}//super-duper-mega important!!! FINALLY! ^_^
 a {text-decoration: none;}
 ul {
 	margin: 0;
@@ -169,6 +170,65 @@ footer {
 				margin:0;
 				font-size: 80%;
 			}
+		}
+	}
+}
+
+/*PARTIALS*/
+
+section.view-holder {
+	position:relative;
+	//Angular animation:
+	.view.ng-enter, .view.ng-leave {
+		//exist only during transition of animation cycle:
+		position:absolute;
+		top:0;
+		left:0;
+		right:0;
+	}
+	.view.ng-enter {
+		@include transition(.95s ease all);
+		//@include transform(translateX(100%));
+		@include opacity(0);
+		z-index: 100;
+	}
+	.view.ng-enter.ng-enter-active {
+		//@include transform(translateX(0%));
+		@include opacity(1);
+	}
+	.view.ng-leave {
+		@include transition(.95s ease all);
+		//@include transform(translateX(0%));
+		@include opacity(1);
+		z-index: 99;
+	}
+	.view.ng-leave.ng-leave-active {
+		//@include transform(translateX(-100%));
+		@include opacity(0);
+	}
+	//End of Angular's animation
+
+	.view {
+		.home,.services,.work,.about,.contacts,.blog {
+			//some styles..
+		}
+		.home {
+			background-color: #FFFFB9;
+		}
+		.services {
+			background-color: #D0E69C;
+		}
+		.work {
+			background-color: #80CBC4;
+		}
+		.about {
+			background-color: #FFCC80;
+		}
+		.contacts {
+			background-color: #BCAAA4;
+		}
+		.blog {
+			background-color: #C5CAE9;
 		}
 	}
 }
