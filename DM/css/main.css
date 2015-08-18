@@ -1,9 +1,9 @@
-.container, header .container .logo, header .container .topmenu, header .container .topmenu li, footer .container .clients, section.view-holder .view .home .monitor .container .slide-holder .slider .move, section.view-holder .view .home .main-article .container .art-right div, section.view-holder .view .home .main-article .container .art-right {
+.container, header .container .logo, header .container .topmenu, header .container .topmenu li, footer .container .clients, section.view-holder .view .home .monitor .container .slide-holder .slider .move, section.view-holder .view .home .main-article .container .art-right div, section.view-holder .view .home .main-article .container .art-right, section.view-holder .view .services .serv-info .container div {
   *zoom: 1; }
-  .container:before, header .container .logo:before, header .container .topmenu:before, header .container .topmenu li:before, footer .container .clients:before, section.view-holder .view .home .monitor .container .slide-holder .slider .move:before, section.view-holder .view .home .main-article .container .art-right div:before, section.view-holder .view .home .main-article .container .art-right:before, .container:after, header .container .logo:after, header .container .topmenu:after, header .container .topmenu li:after, footer .container .clients:after, section.view-holder .view .home .monitor .container .slide-holder .slider .move:after, section.view-holder .view .home .main-article .container .art-right div:after, section.view-holder .view .home .main-article .container .art-right:after {
+  .container:before, header .container .logo:before, header .container .topmenu:before, header .container .topmenu li:before, footer .container .clients:before, section.view-holder .view .home .monitor .container .slide-holder .slider .move:before, section.view-holder .view .home .main-article .container .art-right div:before, section.view-holder .view .home .main-article .container .art-right:before, section.view-holder .view .services .serv-info .container div:before, .container:after, header .container .logo:after, header .container .topmenu:after, header .container .topmenu li:after, footer .container .clients:after, section.view-holder .view .home .monitor .container .slide-holder .slider .move:after, section.view-holder .view .home .main-article .container .art-right div:after, section.view-holder .view .home .main-article .container .art-right:after, section.view-holder .view .services .serv-info .container div:after {
     content: " ";
     display: table; }
-  .container:after, header .container .logo:after, header .container .topmenu:after, header .container .topmenu li:after, footer .container .clients:after, section.view-holder .view .home .monitor .container .slide-holder .slider .move:after, section.view-holder .view .home .main-article .container .art-right div:after, section.view-holder .view .home .main-article .container .art-right:after {
+  .container:after, header .container .logo:after, header .container .topmenu:after, header .container .topmenu li:after, footer .container .clients:after, section.view-holder .view .home .monitor .container .slide-holder .slider .move:after, section.view-holder .view .home .main-article .container .art-right div:after, section.view-holder .view .home .main-article .container .art-right:after, section.view-holder .view .services .serv-info .container div:after {
     clear: both; }
 
 /*STICKY FOOTER*/
@@ -339,6 +339,56 @@ section.view-holder {
             float: left; } }
   section.view-holder .view .services {
     background-color: #D0E69C; }
+    section.view-holder .view .services .serv-heading {
+      background-color: #D52B1E; }
+      section.view-holder .view .services .serv-heading .container {
+        padding-top: 50px;
+        padding-bottom: 50px; }
+        section.view-holder .view .services .serv-heading .container h1 {
+          color: #eee;
+          margin-top: 0;
+          font-weight: bold; }
+          @media only screen and (min-width: 601px) {
+            section.view-holder .view .services .serv-heading .container h1 {
+              font-size: 42px; } }
+          @media only screen and (min-width: 1300px) {
+            section.view-holder .view .services .serv-heading .container h1 {
+              font-size: 48px; } }
+        section.view-holder .view .services .serv-heading .container p {
+          color: #eee;
+          font-size: 110%; }
+    section.view-holder .view .services .serv-info {
+      background-color: #fff; }
+      section.view-holder .view .services .serv-info .container {
+        padding-top: 30px;
+        padding-bottom: 30px; }
+        section.view-holder .view .services .serv-info .container div {
+          padding: 15px;
+          float: left; }
+          @media only screen and (min-width: 601px) {
+            section.view-holder .view .services .serv-info .container div {
+              width: 50%; } }
+          @media only screen and (min-width: 990px) {
+            section.view-holder .view .services .serv-info .container div {
+              width: 33.33%; } }
+          section.view-holder .view .services .serv-info .container div h3 {
+            color: #D52B1E;
+            margin-top: 10px; }
+        section.view-holder .view .services .serv-info .container .separator-1, section.view-holder .view .services .serv-info .container .separator-2, section.view-holder .view .services .serv-info .container .separator-3 {
+          width: 100%;
+          display: none;
+          padding: 0;
+          margin: 0;
+          height: 0; }
+        @media only screen and (min-width: 601px) {
+          section.view-holder .view .services .serv-info .container .separator-1, section.view-holder .view .services .serv-info .container .separator-3 {
+            display: block; } }
+        @media only screen and (min-width: 990px) {
+          section.view-holder .view .services .serv-info .container .separator-1, section.view-holder .view .services .serv-info .container .separator-3 {
+            display: none; } }
+        @media only screen and (min-width: 990px) {
+          section.view-holder .view .services .serv-info .container .separator-2 {
+            display: block; } }
   section.view-holder .view .work {
     background-color: #80CBC4; }
   section.view-holder .view .about {
