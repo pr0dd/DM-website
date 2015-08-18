@@ -34,3 +34,21 @@ appDirs.directive("menuBtn", function() {
 					}
 	}
 });
+
+// appDirs.directive("hoverImg", function() {
+// 	return {
+// 		link: function(scope,element,attrs){
+// 						//initialize variables:
+// 						var capture = $(element).next(".capture");
+// 						//set event handlers:
+// 						element.on("mouseenter", function(){
+// 							element.animate({opacity:0.2},400);
+// 							capture.css({display:"block"});
+// 						});
+// 						capture.on("mouseleave", function(){
+// 							capture.css({display:"none"});
+// 							element.css({opacity:1});
+// 						});
+// 					}
+// 	}
+// });

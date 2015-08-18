@@ -1,9 +1,9 @@
-.container, header .container .logo, header .container .topmenu, header .container .topmenu li, footer .container .clients, section.view-holder .view .home .monitor .container .slide-holder .slider .move, section.view-holder .view .home .main-article .container .art-right div, section.view-holder .view .home .main-article .container .art-right, section.view-holder .view .services .serv-info .container div {
+.container, header .container .logo, header .container .topmenu, header .container .topmenu li, footer .container .clients, section.view-holder .view .home .monitor .container .slide-holder .slider .move, section.view-holder .view .home .main-article .container .art-right div, section.view-holder .view .home .main-article .container .art-right, section.view-holder .view .services .serv-info .container div, section.view-holder .view .work .gallery .container .image-wrapper {
   *zoom: 1; }
-  .container:before, header .container .logo:before, header .container .topmenu:before, header .container .topmenu li:before, footer .container .clients:before, section.view-holder .view .home .monitor .container .slide-holder .slider .move:before, section.view-holder .view .home .main-article .container .art-right div:before, section.view-holder .view .home .main-article .container .art-right:before, section.view-holder .view .services .serv-info .container div:before, .container:after, header .container .logo:after, header .container .topmenu:after, header .container .topmenu li:after, footer .container .clients:after, section.view-holder .view .home .monitor .container .slide-holder .slider .move:after, section.view-holder .view .home .main-article .container .art-right div:after, section.view-holder .view .home .main-article .container .art-right:after, section.view-holder .view .services .serv-info .container div:after {
+  .container:before, header .container .logo:before, header .container .topmenu:before, header .container .topmenu li:before, footer .container .clients:before, section.view-holder .view .home .monitor .container .slide-holder .slider .move:before, section.view-holder .view .home .main-article .container .art-right div:before, section.view-holder .view .home .main-article .container .art-right:before, section.view-holder .view .services .serv-info .container div:before, section.view-holder .view .work .gallery .container .image-wrapper:before, .container:after, header .container .logo:after, header .container .topmenu:after, header .container .topmenu li:after, footer .container .clients:after, section.view-holder .view .home .monitor .container .slide-holder .slider .move:after, section.view-holder .view .home .main-article .container .art-right div:after, section.view-holder .view .home .main-article .container .art-right:after, section.view-holder .view .services .serv-info .container div:after, section.view-holder .view .work .gallery .container .image-wrapper:after {
     content: " ";
     display: table; }
-  .container:after, header .container .logo:after, header .container .topmenu:after, header .container .topmenu li:after, footer .container .clients:after, section.view-holder .view .home .monitor .container .slide-holder .slider .move:after, section.view-holder .view .home .main-article .container .art-right div:after, section.view-holder .view .home .main-article .container .art-right:after, section.view-holder .view .services .serv-info .container div:after {
+  .container:after, header .container .logo:after, header .container .topmenu:after, header .container .topmenu li:after, footer .container .clients:after, section.view-holder .view .home .monitor .container .slide-holder .slider .move:after, section.view-holder .view .home .main-article .container .art-right div:after, section.view-holder .view .home .main-article .container .art-right:after, section.view-holder .view .services .serv-info .container div:after, section.view-holder .view .work .gallery .container .image-wrapper:after {
     clear: both; }
 
 /*STICKY FOOTER*/
@@ -391,6 +391,62 @@ section.view-holder {
             display: block; } }
   section.view-holder .view .work {
     background-color: #80CBC4; }
+    section.view-holder .view .work .work-heading {
+      background-color: #D52B1E; }
+      section.view-holder .view .work .work-heading .container {
+        padding-top: 50px;
+        padding-bottom: 50px; }
+        section.view-holder .view .work .work-heading .container h1 {
+          color: #eee;
+          margin-top: 0;
+          font-weight: bold; }
+          @media only screen and (min-width: 601px) {
+            section.view-holder .view .work .work-heading .container h1 {
+              font-size: 42px; } }
+          @media only screen and (min-width: 1300px) {
+            section.view-holder .view .work .work-heading .container h1 {
+              font-size: 48px; } }
+        section.view-holder .view .work .work-heading .container p {
+          color: #eee;
+          font-size: 110%; }
+    section.view-holder .view .work .gallery {
+      background-color: #fff; }
+      section.view-holder .view .work .gallery .container {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center; }
+        section.view-holder .view .work .gallery .container .image-wrapper .image {
+          display: inline-block;
+          position: relative;
+          margin: 0 15px 15px 0; }
+          @media only screen and (min-width: 601px) {
+            section.view-holder .view .work .gallery .container .image-wrapper .image {
+              width: 30%; } }
+          section.view-holder .view .work .gallery .container .image-wrapper .image:hover .capture {
+            opacity: 0.8;
+            filter: alpha(opacity=80); }
+          section.view-holder .view .work .gallery .container .image-wrapper .image .capture {
+            position: absolute;
+            padding: 15px;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            color: #000;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            -webkit-transition: 0.4s ease all;
+            -moz-transition: 0.4s ease all;
+            -ms-transition: 0.4s ease all;
+            -o-transition: 0.4s ease all;
+            transition: 0.4s ease all;
+            background-color: #fff; }
+            section.view-holder .view .work .gallery .container .image-wrapper .image .capture h4 {
+              margin-top: 0; }
+          section.view-holder .view .work .gallery .container .image-wrapper .image img {
+            cursor: pointer;
+            max-width: 100%;
+            height: auto; }
   section.view-holder .view .about {
     background-color: #FFCC80; }
   section.view-holder .view .contacts {

@@ -359,6 +359,61 @@ section.view-holder {
 		}
 		.work {
 			background-color: #80CBC4;
+			.work-heading {
+				background-color: #D52B1E;
+				.container {
+					padding-top:50px;
+					padding-bottom:50px;
+					h1 {
+						color:#eee;
+						margin-top:0; 
+						font-weight: bold;
+						@include bp-medium {font-size:42px;}
+						@include bp-xlarge {font-size:48px;}
+					}
+					p {color:#eee;font-size:110%;}
+				}
+			}
+			.gallery {
+				background-color:#fff;
+				.container {
+					padding-top:30px;
+					padding-bottom:30px;
+					text-align: center;
+					.image-wrapper {
+						@extend %clearfix;
+						.image {
+							display: inline-block;
+							position:relative;
+							margin: 0 15px 15px 0;
+							@include bp-medium {width:30%;}
+							&:hover .capture {
+								@include opacity(0.80);
+							}
+
+							.capture {
+								position:absolute;
+								padding:15px;
+								width: 100%;
+								height: 100%;
+								left:0;
+								top:0;
+								color:#000;
+								@include opacity(0);
+								@include transition(.4s ease all);
+								background-color:#fff;
+								h4 {margin-top: 0;}
+							}
+							img {
+								cursor: pointer;
+								max-width: 100%;
+								height: auto;
+
+							}
+						}
+					}
+				}
+			}
 		}
 		.about {
 			background-color: #FFCC80;
