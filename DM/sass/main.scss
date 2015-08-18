@@ -19,6 +19,9 @@ ul {
 	padding: 0;
 	list-style: none;
 }
+p {
+	font-size:80%;
+}
 .container {
 	@extend %clearfix;
 	min-width:300px;
@@ -140,9 +143,7 @@ footer {
 				width:50%;
 				float:left;
 			}
-			a {
-				&:hover {@include opacity(0.6)}
-			}
+			a { &:hover {@include opacity(0.6)} }
 		}
 		.clients {
 			@extend %clearfix;
@@ -211,7 +212,6 @@ section.view-holder {
 
 	.view {
 		.home {
-			background-color: #FFFFB9;
 			.monitor {
 				background-color:#D52B1E;
 				.container {
@@ -233,6 +233,8 @@ section.view-holder {
 							overflow: hidden;
 							//outline: 1px solid red;
 							.move {
+								position:relative;
+								left:0;
 								width:500%;
 								@extend %clearfix;
 								margin: 0;
@@ -274,6 +276,34 @@ section.view-holder {
 								color:#000;
 							}
 						}
+					}
+				}
+			}
+			.main-article {
+				background-color:#fff;
+				.container {
+					padding-top:30px;
+					padding-bottom:30px;
+					.art-left,.art-right {
+						@include bp-medium {width:50%;float:left;}
+					}
+					.art-left {
+						padding-right: 30px;
+						h2 { @include bp-medium {margin-bottom:40px;} }
+					}
+					.art-right {
+						div {
+							@extend %clearfix;
+							margin-bottom: 30px;
+						}
+						@extend %clearfix;
+						h2 {color:#D52B1E;margin-top:0;}
+						a {
+							margin-right:30px;
+							@include transition(.5s ease all);
+							&:hover {@include opacity(.75)}
+							@include bp-xlarge {float:left;}
+						}						
 					}
 				}
 			}

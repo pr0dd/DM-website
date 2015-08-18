@@ -1,9 +1,9 @@
-.container, header .container .logo, header .container .topmenu, header .container .topmenu li, footer .container .clients, section.view-holder .view .home .monitor .container .slide-holder .slider .move {
+.container, header .container .logo, header .container .topmenu, header .container .topmenu li, footer .container .clients, section.view-holder .view .home .monitor .container .slide-holder .slider .move, section.view-holder .view .home .main-article .container .art-right div, section.view-holder .view .home .main-article .container .art-right {
   *zoom: 1; }
-  .container:before, header .container .logo:before, header .container .topmenu:before, header .container .topmenu li:before, footer .container .clients:before, section.view-holder .view .home .monitor .container .slide-holder .slider .move:before, .container:after, header .container .logo:after, header .container .topmenu:after, header .container .topmenu li:after, footer .container .clients:after, section.view-holder .view .home .monitor .container .slide-holder .slider .move:after {
+  .container:before, header .container .logo:before, header .container .topmenu:before, header .container .topmenu li:before, footer .container .clients:before, section.view-holder .view .home .monitor .container .slide-holder .slider .move:before, section.view-holder .view .home .main-article .container .art-right div:before, section.view-holder .view .home .main-article .container .art-right:before, .container:after, header .container .logo:after, header .container .topmenu:after, header .container .topmenu li:after, footer .container .clients:after, section.view-holder .view .home .monitor .container .slide-holder .slider .move:after, section.view-holder .view .home .main-article .container .art-right div:after, section.view-holder .view .home .main-article .container .art-right:after {
     content: " ";
     display: table; }
-  .container:after, header .container .logo:after, header .container .topmenu:after, header .container .topmenu li:after, footer .container .clients:after, section.view-holder .view .home .monitor .container .slide-holder .slider .move:after {
+  .container:after, header .container .logo:after, header .container .topmenu:after, header .container .topmenu li:after, footer .container .clients:after, section.view-holder .view .home .monitor .container .slide-holder .slider .move:after, section.view-holder .view .home .main-article .container .art-right div:after, section.view-holder .view .home .main-article .container .art-right:after {
     clear: both; }
 
 /*STICKY FOOTER*/
@@ -31,6 +31,9 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none; }
+
+p {
+  font-size: 80%; }
 
 .container {
   min-width: 300px;
@@ -229,79 +232,111 @@ section.view-holder {
   section.view-holder .view.ng-leave.ng-leave-active {
     opacity: 0;
     filter: alpha(opacity=0); }
-  section.view-holder .view .home {
-    background-color: #FFFFB9; }
-    section.view-holder .view .home .monitor {
-      background-color: #D52B1E; }
-      section.view-holder .view .home .monitor .container {
-        padding-top: 5px; }
+  section.view-holder .view .home .monitor {
+    background-color: #D52B1E; }
+    section.view-holder .view .home .monitor .container {
+      padding-top: 5px; }
+      @media only screen and (min-width: 601px) {
+        section.view-holder .view .home .monitor .container {
+          padding-top: 50px; } }
+      section.view-holder .view .home .monitor .container .slide-holder {
+        width: 100%;
+        margin: 0 auto;
+        padding: 17px 18px 80px;
+        background: url(../images/monitor.png) no-repeat 0 0;
+        background-size: 100% 100%; }
+        @media only screen and (min-width: 400px) {
+          section.view-holder .view .home .monitor .container .slide-holder {
+            width: 90%; } }
         @media only screen and (min-width: 601px) {
-          section.view-holder .view .home .monitor .container {
-            padding-top: 50px; } }
-        section.view-holder .view .home .monitor .container .slide-holder {
+          section.view-holder .view .home .monitor .container .slide-holder {
+            width: 50%;
+            float: left; } }
+        @media only screen and (min-width: 990px) {
+          section.view-holder .view .home .monitor .container .slide-holder {
+            width: 40%; } }
+        section.view-holder .view .home .monitor .container .slide-holder .slider {
           width: 100%;
-          margin: 0 auto;
-          padding: 17px 18px 80px;
-          background: url(../images/monitor.png) no-repeat 0 0;
-          background-size: 100% 100%; }
-          @media only screen and (min-width: 400px) {
-            section.view-holder .view .home .monitor .container .slide-holder {
-              width: 90%; } }
+          overflow: hidden; }
+          section.view-holder .view .home .monitor .container .slide-holder .slider .move {
+            position: relative;
+            left: 0;
+            width: 500%;
+            margin: 0; }
+            section.view-holder .view .home .monitor .container .slide-holder .slider .move img {
+              float: left;
+              width: 20%;
+              height: auto; }
+      section.view-holder .view .home .monitor .container .heading {
+        padding: 10px 0 20px;
+        text-align: center;
+        color: #eee; }
+        @media only screen and (min-width: 601px) {
+          section.view-holder .view .home .monitor .container .heading {
+            width: 50%;
+            float: right;
+            padding-left: 40px;
+            text-align: left; } }
+        @media only screen and (min-width: 990px) {
+          section.view-holder .view .home .monitor .container .heading {
+            width: 60%; } }
+        @media only screen and (min-width: 1300px) {
+          section.view-holder .view .home .monitor .container .heading {
+            padding-left: 80px; } }
+        section.view-holder .view .home .monitor .container .heading h1 {
+          margin-top: 0;
+          font-weight: bold; }
           @media only screen and (min-width: 601px) {
-            section.view-holder .view .home .monitor .container .slide-holder {
-              width: 50%;
-              float: left; } }
-          @media only screen and (min-width: 990px) {
-            section.view-holder .view .home .monitor .container .slide-holder {
-              width: 40%; } }
-          section.view-holder .view .home .monitor .container .slide-holder .slider {
-            width: 100%;
-            overflow: hidden; }
-            section.view-holder .view .home .monitor .container .slide-holder .slider .move {
-              width: 500%;
-              margin: 0; }
-              section.view-holder .view .home .monitor .container .slide-holder .slider .move img {
-                float: left;
-                width: 20%;
-                height: auto; }
-        section.view-holder .view .home .monitor .container .heading {
-          padding: 10px 0 20px;
-          text-align: center;
-          color: #eee; }
-          @media only screen and (min-width: 601px) {
-            section.view-holder .view .home .monitor .container .heading {
-              width: 50%;
-              float: right;
-              padding-left: 40px;
-              text-align: left; } }
-          @media only screen and (min-width: 990px) {
-            section.view-holder .view .home .monitor .container .heading {
-              width: 60%; } }
+            section.view-holder .view .home .monitor .container .heading h1 {
+              font-size: 42px;
+              margin-bottom: 40px; } }
           @media only screen and (min-width: 1300px) {
-            section.view-holder .view .home .monitor .container .heading {
-              padding-left: 80px; } }
-          section.view-holder .view .home .monitor .container .heading h1 {
-            margin-top: 0;
-            font-weight: bold; }
-            @media only screen and (min-width: 601px) {
-              section.view-holder .view .home .monitor .container .heading h1 {
-                font-size: 42px;
-                margin-bottom: 40px; } }
-            @media only screen and (min-width: 1300px) {
-              section.view-holder .view .home .monitor .container .heading h1 {
-                font-size: 48px; } }
-          section.view-holder .view .home .monitor .container .heading a {
-            color: #eee;
-            padding: 10px 20px;
-            background-color: #000;
-            -webkit-transition: 0.5s ease all;
-            -moz-transition: 0.5s ease all;
-            -ms-transition: 0.5s ease all;
-            -o-transition: 0.5s ease all;
-            transition: 0.5s ease all; }
-            section.view-holder .view .home .monitor .container .heading a:hover {
-              background-color: #fff;
-              color: #000; }
+            section.view-holder .view .home .monitor .container .heading h1 {
+              font-size: 48px; } }
+        section.view-holder .view .home .monitor .container .heading a {
+          color: #eee;
+          padding: 10px 20px;
+          background-color: #000;
+          -webkit-transition: 0.5s ease all;
+          -moz-transition: 0.5s ease all;
+          -ms-transition: 0.5s ease all;
+          -o-transition: 0.5s ease all;
+          transition: 0.5s ease all; }
+          section.view-holder .view .home .monitor .container .heading a:hover {
+            background-color: #fff;
+            color: #000; }
+  section.view-holder .view .home .main-article {
+    background-color: #fff; }
+    section.view-holder .view .home .main-article .container {
+      padding-top: 30px;
+      padding-bottom: 30px; }
+      @media only screen and (min-width: 601px) {
+        section.view-holder .view .home .main-article .container .art-left, section.view-holder .view .home .main-article .container .art-right {
+          width: 50%;
+          float: left; } }
+      section.view-holder .view .home .main-article .container .art-left {
+        padding-right: 30px; }
+        @media only screen and (min-width: 601px) {
+          section.view-holder .view .home .main-article .container .art-left h2 {
+            margin-bottom: 40px; } }
+      section.view-holder .view .home .main-article .container .art-right div {
+        margin-bottom: 30px; }
+      section.view-holder .view .home .main-article .container .art-right h2 {
+        color: #D52B1E;
+        margin-top: 0; }
+      section.view-holder .view .home .main-article .container .art-right a {
+        margin-right: 30px;
+        -webkit-transition: 0.5s ease all;
+        -moz-transition: 0.5s ease all;
+        -ms-transition: 0.5s ease all;
+        -o-transition: 0.5s ease all;
+        transition: 0.5s ease all; }
+        section.view-holder .view .home .main-article .container .art-right a:hover {
+          opacity: 0.75;
+          filter: alpha(opacity=75); }
+        @media only screen and (min-width: 1300px) {
+          section.view-holder .view .home .main-article .container .art-right a {
+            float: left; } }
   section.view-holder .view .services {
     background-color: #D0E69C; }
   section.view-holder .view .work {
