@@ -143,7 +143,10 @@ footer {
 				width:50%;
 				float:left;
 			}
-			a { &:hover {@include opacity(0.6)} }
+			a {
+				@include transition(.3s ease all);
+				&:hover {@include opacity(0.6)}
+			}
 		}
 		.clients {
 			@extend %clearfix;
@@ -358,7 +361,6 @@ section.view-holder {
 			}
 		}
 		.work {
-			background-color: #80CBC4;
 			.work-heading {
 				background-color: #D52B1E;
 				.container {
@@ -380,35 +382,51 @@ section.view-holder {
 					padding-top:30px;
 					padding-bottom:30px;
 					text-align: center;
-					.image-wrapper {
+					.img-wrapper {
 						@extend %clearfix;
-						.image {
-							display: inline-block;
+						.thumb {
 							position:relative;
-							margin: 0 15px 15px 0;
-							@include bp-medium {width:30%;}
-							&:hover .capture {
-								@include opacity(0.80);
-							}
-
-							.capture {
-								position:absolute;
-								padding:15px;
-								width: 100%;
-								height: 100%;
-								left:0;
-								top:0;
+							display: inline-block;
+							@include bp-medium {width:33%;}
+							padding-bottom:20px;
+							@include bp-medium {padding-right:20px;}
+							a {
 								color:#000;
-								@include opacity(0);
-								@include transition(.4s ease all);
-								background-color:#fff;
-								h4 {margin-top: 0;}
+								img {
+									max-width: 100%;
+									height: auto;
+									@include box-shadow;
+								}
+								span {
+									display: block;
+									position:absolute; 
+									top:0; 
+									left:0; 
+									width:100%; 
+									height:100%;
+									cursor:pointer; 
+									background-color:#fff;
+									@include transition(.5s ease all);
+									@include opacity(0);
+									&:hover {@include opacity(0.75)}
+								}
 							}
-							img {
-								cursor: pointer;
-								max-width: 100%;
-								height: auto;
-
+						}
+					}
+					.showmore {
+						padding: 35px 0 10px;
+						button {
+							background-color:#000;
+							color:#eee;
+							border:0px solid #fff;
+							outline: none;
+							padding:5px 20px;
+							@include border-radius(15px);
+							@include transition(.5s ease all);
+							@include box-shadow;
+							&:hover {
+								background-color:#eee;
+								color:#000;
 							}
 						}
 					}
