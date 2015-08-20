@@ -462,10 +462,6 @@ section.view-holder {
           border: 0px solid #fff;
           outline: none;
           padding: 5px 20px;
-          -moz-border-radius: 15px;
-          -webkit-border-radius: 15px;
-          -ms-border-radius: 15px;
-          border-radius: 15px;
           -webkit-transition: 0.5s ease all;
           -moz-transition: 0.5s ease all;
           -ms-transition: 0.5s ease all;
@@ -475,9 +471,142 @@ section.view-holder {
           section.view-holder .view .work .gallery .container .showmore button:hover {
             background-color: #eee;
             color: #000; }
-  section.view-holder .view .about {
-    background-color: #FFCC80; }
-  section.view-holder .view .contacts {
-    background-color: #BCAAA4; }
-  section.view-holder .view .blog {
-    background-color: #C5CAE9; }
+  section.view-holder .view .about .about-heading {
+    background-color: #D52B1E; }
+    section.view-holder .view .about .about-heading .container {
+      padding-top: 50px;
+      padding-bottom: 50px; }
+      section.view-holder .view .about .about-heading .container h1 {
+        color: #eee;
+        margin-top: 0;
+        font-weight: bold; }
+        @media only screen and (min-width: 601px) {
+          section.view-holder .view .about .about-heading .container h1 {
+            font-size: 42px; } }
+        @media only screen and (min-width: 1300px) {
+          section.view-holder .view .about .about-heading .container h1 {
+            font-size: 48px; } }
+      section.view-holder .view .about .about-heading .container p {
+        color: #eee;
+        font-size: 110%; }
+  section.view-holder .view .about .about-content .container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center; }
+    section.view-holder .view .about .about-content .container p {
+      text-align: left; }
+    section.view-holder .view .about .about-content .container img {
+      max-width: 100%;
+      height: auto;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19); }
+      @media only screen and (min-width: 800px) {
+        section.view-holder .view .about .about-content .container img {
+          margin: 0 60px 20px 0;
+          float: left; } }
+      @media only screen and (min-width: 990px) {
+        section.view-holder .view .about .about-content .container img {
+          margin: 0;
+          float: none; } }
+      @media only screen and (min-width: 1300px) {
+        section.view-holder .view .about .about-content .container img {
+          margin: 0 60px 20px 0;
+          float: left; } }
+  section.view-holder .view .contacts .contacts-heading {
+    background-color: #D52B1E; }
+    section.view-holder .view .contacts .contacts-heading .container {
+      padding-top: 50px;
+      padding-bottom: 50px; }
+      section.view-holder .view .contacts .contacts-heading .container h1 {
+        color: #eee;
+        margin-top: 0;
+        font-weight: bold; }
+        @media only screen and (min-width: 601px) {
+          section.view-holder .view .contacts .contacts-heading .container h1 {
+            font-size: 42px; } }
+        @media only screen and (min-width: 1300px) {
+          section.view-holder .view .contacts .contacts-heading .container h1 {
+            font-size: 48px; } }
+      section.view-holder .view .contacts .contacts-heading .container a {
+        -webkit-transition: 0.3s ease all;
+        -moz-transition: 0.3s ease all;
+        -ms-transition: 0.3s ease all;
+        -o-transition: 0.3s ease all;
+        transition: 0.3s ease all;
+        margin-right: 15px; }
+        section.view-holder .view .contacts .contacts-heading .container a:hover {
+          opacity: 0.7;
+          filter: alpha(opacity=70); }
+  section.view-holder .view .contacts .contacts-content .container {
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    @media only screen and (min-width: 601px) {
+      section.view-holder .view .contacts .contacts-content .container form {
+        float: left;
+        width: 55%; } }
+    section.view-holder .view .contacts .contacts-content .container form .f-group {
+      position: relative;
+      margin-top: 15px;
+      margin-bottom: 30px; }
+    section.view-holder .view .contacts .contacts-content .container form .f-input, section.view-holder .view .contacts .contacts-content .container form .f-textarea {
+      border: 1px solid #D52B1E;
+      padding: 10px;
+      display: block;
+      width: 90%;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19); }
+      section.view-holder .view .contacts .contacts-content .container form .f-input:focus ~ .f-label, section.view-holder .view .contacts .contacts-content .container form .f-input:valid ~ .f-label, section.view-holder .view .contacts .contacts-content .container form .f-textarea:focus ~ .f-label, section.view-holder .view .contacts .contacts-content .container form .f-textarea:valid ~ .f-label {
+        top: -20px;
+        color: #888; }
+    section.view-holder .view .contacts .contacts-content .container form .f-textarea {
+      max-width: 90%;
+      min-width: 200px; }
+    section.view-holder .view .contacts .contacts-content .container form .f-label {
+      position: absolute;
+      left: 5px;
+      top: 7px;
+      color: #888;
+      -webkit-transition: 0.2s ease all;
+      -moz-transition: 0.2s ease all;
+      -ms-transition: 0.2s ease all;
+      -o-transition: 0.2s ease all;
+      transition: 0.2s ease all; }
+    section.view-holder .view .contacts .contacts-content .container form .f-button {
+      text-align: right;
+      width: 90%;
+      margin-bottom: 25px; }
+      section.view-holder .view .contacts .contacts-content .container form .f-button button {
+        background-color: #000;
+        color: #eee;
+        border: 0px solid #fff;
+        outline: none;
+        padding: 5px 20px;
+        -webkit-transition: 0.5s ease all;
+        -moz-transition: 0.5s ease all;
+        -ms-transition: 0.5s ease all;
+        -o-transition: 0.5s ease all;
+        transition: 0.5s ease all;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19); }
+        section.view-holder .view .contacts .contacts-content .container form .f-button button:hover {
+          background-color: #eee;
+          color: #000; }
+    @media only screen and (min-width: 601px) {
+      section.view-holder .view .contacts .contacts-content .container p {
+        float: left;
+        width: 45%; } }
+  section.view-holder .view .blog .blog-heading {
+    background-color: #D52B1E; }
+    section.view-holder .view .blog .blog-heading .container {
+      padding-top: 50px;
+      padding-bottom: 50px; }
+      section.view-holder .view .blog .blog-heading .container h1 {
+        color: #eee;
+        margin-top: 0;
+        font-weight: bold; }
+        @media only screen and (min-width: 601px) {
+          section.view-holder .view .blog .blog-heading .container h1 {
+            font-size: 42px; } }
+        @media only screen and (min-width: 1300px) {
+          section.view-holder .view .blog .blog-heading .container h1 {
+            font-size: 48px; } }
+      section.view-holder .view .blog .blog-heading .container p {
+        color: #eee;
+        font-size: 110%; }
