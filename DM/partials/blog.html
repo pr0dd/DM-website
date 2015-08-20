@@ -8,9 +8,80 @@
 
 	<div class="row blog-content">
 		<div class="container">
-			<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+		  	<!-- MAIN CONTENT -->
+			<div class="content-left">
+				<div class="article" ng-repeat="article in articles | limitTo:counter">
+					<a ng-href="#/{{article.id}}"><h3>{{article.topic}}</h3></a>
+					<p class="date">{{article.date}}</p>
 
-			The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>			
+					<div class="article-content">
+						<a ng-href="#/{{article.id}}" ng-show="article.showImg">
+							<img ng-src="images/{{article.thumb}}">
+						</a>
+						<video id="player" controls poster="{{article.poster}}" ng-src="{{article.videoPath}}" ng-show="article.showVid">
+							<p>Sorry. Video cannot be displayed</p> 	
+					  </video>
+					</div>
+
+				  <p class="text">{{article.text}}</p>
+				  <span><a ng-href="#/{{article.id}}" class="button">Read more</a></span>					
+				</div>
+			</div>
+				<!--SECONDARY CONTENT-->
+			<div class="content-right">
+					<!-- 1st side post -->
+				<div class="side-post">
+					<h3>Featured Posts</h3>
+					<div class="slider">
+						<div class="move">
+							<a ng-href="#/{{article.id}}" ng-repeat="article in articles | limitTo:2">
+								<div>
+									<img ng-src="images/{{article.thumb}}" ng-show="article.showImg">
+									<video id="player" controls poster="{{article.poster}}" ng-src="{{article.videoPath}}" ng-show="article.showVid">
+										<p>Sorry. Video cannot be displayed</p> 	
+								  </video>
+								  <h4>{{article.topic}}</h4>
+								  <p class="date">{{article.date}}</p>
+								</div>
+							</a>
+							<a ng-href="#/{{articles[0].id}}">
+								<div>
+									<img ng-src="images/{{articles[0].thumb}}" ng-show="articles[0].showImg">
+									<video id="player" controls poster="{{articles[0].poster}}" ng-src="{{articles[0].videoPath}}" ng-show="articles[0].showVid">
+										<p>Sorry. Video cannot be displayed</p> 	
+								  </video>
+								  <h4>{{articles[0].topic}}</h4>
+								  <p class="date">{{articles[0].date}}</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div> 
+					<!-- 2nd side post -->
+				<div class="side-post">
+					<h3>Recent Posts</h3>
+					<div class="recent"  ng-repeat="article in articles | reverse">
+						<a ng-href="#/{{article.id}}">
+							<div>
+								<img ng-src="images/{{article.thumb}}" ng-show="article.showImg">
+								<video id="player" controls poster="{{article.poster}}" ng-src="{{article.videoPath}}" ng-show="article.showVid">									
+									<p>Sorry. Video cannot be displayed</p> 	
+							  </video>
+							  <h4>{{article.topic}}</h4>
+							  <p class="date">{{article.date}}</p>
+							</div>
+						</a>
+					</div>
+				</div>
+					<!-- 3rd side post -->
+				<div class="side-post">
+					<h3>Search by tags</h3>
+					<a href="#">photo</a>
+					<a href="#">video</a>
+					<a href="#">text</a>
+				</div>
+
+			</div>
 		</div>
 	</div>
 </div>

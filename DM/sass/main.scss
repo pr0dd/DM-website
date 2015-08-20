@@ -559,6 +559,89 @@ section.view-holder {
 					p {color:#eee;font-size:110%;}
 				}
 			}
+			.blog-content {
+				.container {
+					padding-top:15px;
+					padding-bottom:30px;
+					img, video {max-width:100%; height:auto;}
+					.content-left {
+						outline: 1px solid red;//remove
+						@include bp-medium {float:left; width:70%;}
+						.article {
+							@extend %clearfix;
+							//position:relative;
+							border:1px solid black;
+							padding:10px;
+							margin-bottom: 20px;
+							a {
+								color:#000;
+								h3 {margin:10px 0 0;}
+							}
+							.date {color:#404040;}
+							.article-content {
+								padding-right:20px;
+								@include bp-medium {float:left; width:50%;} 
+							}
+							.text {
+								&:after {
+									content:" ";
+									display: table;
+									clear:both;
+								}
+							}
+							span {
+								display: block;
+								text-align: left;
+								.button {
+									margin:15px 0 20px;
+									padding:5px 15px;
+									background-color: #D52B1E;
+									color:#eee;
+									@include transition (.5s ease all);
+									&:hover {
+										background-color: #000;
+									}
+								}								
+							}
+						}
+					}
+					.content-right {
+						outline: 1px solid red; //remove
+						@include bp-medium {float:left; width:30%;}
+						.side-post {
+							outline: 1px solid black;
+							padding:10px;
+							@include bp-medium {padding-left: 30px;}
+							@include bp-xmedium {padding-left: 50px;}
+							@include bp-large {padding-left: 30px;}
+							@include bp-xlarge {padding-left: 70px;}
+							h3 {
+								border-bottom:1px solid black;
+								padding-bottom:5px;
+								margin:10px 0 0;
+							}
+							.slider {
+								width: 100%;						
+								overflow: hidden;
+								//outline: 1px solid red;
+								.move {
+									position:relative;
+									left:0;
+									width:300%;
+									@extend %clearfix;
+									margin: 0;
+									//outline: 1px solid blue;
+									a {
+										float:left;
+										width: 33.33%;
+										height: auto;			
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }

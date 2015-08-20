@@ -1,9 +1,9 @@
-.container, header .container .logo, header .container .topmenu, header .container .topmenu li, footer .container .clients, section.view-holder .view .home .monitor .container .slide-holder .slider .move, section.view-holder .view .home .main-article .container .art-right div, section.view-holder .view .home .main-article .container .art-right, section.view-holder .view .services .serv-info .container div, section.view-holder .view .work .gallery .container .img-wrapper {
+.container, header .container .logo, header .container .topmenu, header .container .topmenu li, footer .container .clients, section.view-holder .view .home .monitor .container .slide-holder .slider .move, section.view-holder .view .home .main-article .container .art-right div, section.view-holder .view .home .main-article .container .art-right, section.view-holder .view .services .serv-info .container div, section.view-holder .view .work .gallery .container .img-wrapper, section.view-holder .view .blog .blog-content .container .content-left .article, section.view-holder .view .blog .blog-content .container .content-right .side-post .slider .move {
   *zoom: 1; }
-  .container:before, header .container .logo:before, header .container .topmenu:before, header .container .topmenu li:before, footer .container .clients:before, section.view-holder .view .home .monitor .container .slide-holder .slider .move:before, section.view-holder .view .home .main-article .container .art-right div:before, section.view-holder .view .home .main-article .container .art-right:before, section.view-holder .view .services .serv-info .container div:before, section.view-holder .view .work .gallery .container .img-wrapper:before, .container:after, header .container .logo:after, header .container .topmenu:after, header .container .topmenu li:after, footer .container .clients:after, section.view-holder .view .home .monitor .container .slide-holder .slider .move:after, section.view-holder .view .home .main-article .container .art-right div:after, section.view-holder .view .home .main-article .container .art-right:after, section.view-holder .view .services .serv-info .container div:after, section.view-holder .view .work .gallery .container .img-wrapper:after {
+  .container:before, header .container .logo:before, header .container .topmenu:before, header .container .topmenu li:before, footer .container .clients:before, section.view-holder .view .home .monitor .container .slide-holder .slider .move:before, section.view-holder .view .home .main-article .container .art-right div:before, section.view-holder .view .home .main-article .container .art-right:before, section.view-holder .view .services .serv-info .container div:before, section.view-holder .view .work .gallery .container .img-wrapper:before, section.view-holder .view .blog .blog-content .container .content-left .article:before, section.view-holder .view .blog .blog-content .container .content-right .side-post .slider .move:before, .container:after, header .container .logo:after, header .container .topmenu:after, header .container .topmenu li:after, footer .container .clients:after, section.view-holder .view .home .monitor .container .slide-holder .slider .move:after, section.view-holder .view .home .main-article .container .art-right div:after, section.view-holder .view .home .main-article .container .art-right:after, section.view-holder .view .services .serv-info .container div:after, section.view-holder .view .work .gallery .container .img-wrapper:after, section.view-holder .view .blog .blog-content .container .content-left .article:after, section.view-holder .view .blog .blog-content .container .content-right .side-post .slider .move:after {
     content: " ";
     display: table; }
-  .container:after, header .container .logo:after, header .container .topmenu:after, header .container .topmenu li:after, footer .container .clients:after, section.view-holder .view .home .monitor .container .slide-holder .slider .move:after, section.view-holder .view .home .main-article .container .art-right div:after, section.view-holder .view .home .main-article .container .art-right:after, section.view-holder .view .services .serv-info .container div:after, section.view-holder .view .work .gallery .container .img-wrapper:after {
+  .container:after, header .container .logo:after, header .container .topmenu:after, header .container .topmenu li:after, footer .container .clients:after, section.view-holder .view .home .monitor .container .slide-holder .slider .move:after, section.view-holder .view .home .main-article .container .art-right div:after, section.view-holder .view .home .main-article .container .art-right:after, section.view-holder .view .services .serv-info .container div:after, section.view-holder .view .work .gallery .container .img-wrapper:after, section.view-holder .view .blog .blog-content .container .content-left .article:after, section.view-holder .view .blog .blog-content .container .content-right .side-post .slider .move:after {
     clear: both; }
 
 /*STICKY FOOTER*/
@@ -610,3 +610,87 @@ section.view-holder {
       section.view-holder .view .blog .blog-heading .container p {
         color: #eee;
         font-size: 110%; }
+  section.view-holder .view .blog .blog-content .container {
+    padding-top: 15px;
+    padding-bottom: 30px; }
+    section.view-holder .view .blog .blog-content .container img, section.view-holder .view .blog .blog-content .container video {
+      max-width: 100%;
+      height: auto; }
+    section.view-holder .view .blog .blog-content .container .content-left {
+      outline: 1px solid red; }
+      @media only screen and (min-width: 601px) {
+        section.view-holder .view .blog .blog-content .container .content-left {
+          float: left;
+          width: 70%; } }
+      section.view-holder .view .blog .blog-content .container .content-left .article {
+        border: 1px solid black;
+        padding: 10px;
+        margin-bottom: 20px; }
+        section.view-holder .view .blog .blog-content .container .content-left .article a {
+          color: #000; }
+          section.view-holder .view .blog .blog-content .container .content-left .article a h3 {
+            margin: 10px 0 0; }
+        section.view-holder .view .blog .blog-content .container .content-left .article .date {
+          color: #404040; }
+        section.view-holder .view .blog .blog-content .container .content-left .article .article-content {
+          padding-right: 20px; }
+          @media only screen and (min-width: 601px) {
+            section.view-holder .view .blog .blog-content .container .content-left .article .article-content {
+              float: left;
+              width: 50%; } }
+        section.view-holder .view .blog .blog-content .container .content-left .article .text:after {
+          content: " ";
+          display: table;
+          clear: both; }
+        section.view-holder .view .blog .blog-content .container .content-left .article span {
+          display: block;
+          text-align: left; }
+          section.view-holder .view .blog .blog-content .container .content-left .article span .button {
+            margin: 15px 0 20px;
+            padding: 5px 15px;
+            background-color: #D52B1E;
+            color: #eee;
+            -webkit-transition: 0.5s ease all;
+            -moz-transition: 0.5s ease all;
+            -ms-transition: 0.5s ease all;
+            -o-transition: 0.5s ease all;
+            transition: 0.5s ease all; }
+            section.view-holder .view .blog .blog-content .container .content-left .article span .button:hover {
+              background-color: #000; }
+    section.view-holder .view .blog .blog-content .container .content-right {
+      outline: 1px solid red; }
+      @media only screen and (min-width: 601px) {
+        section.view-holder .view .blog .blog-content .container .content-right {
+          float: left;
+          width: 30%; } }
+      section.view-holder .view .blog .blog-content .container .content-right .side-post {
+        outline: 1px solid black;
+        padding: 10px; }
+        @media only screen and (min-width: 601px) {
+          section.view-holder .view .blog .blog-content .container .content-right .side-post {
+            padding-left: 30px; } }
+        @media only screen and (min-width: 800px) {
+          section.view-holder .view .blog .blog-content .container .content-right .side-post {
+            padding-left: 50px; } }
+        @media only screen and (min-width: 990px) {
+          section.view-holder .view .blog .blog-content .container .content-right .side-post {
+            padding-left: 30px; } }
+        @media only screen and (min-width: 1300px) {
+          section.view-holder .view .blog .blog-content .container .content-right .side-post {
+            padding-left: 70px; } }
+        section.view-holder .view .blog .blog-content .container .content-right .side-post h3 {
+          border-bottom: 1px solid black;
+          padding-bottom: 5px;
+          margin: 10px 0 0; }
+        section.view-holder .view .blog .blog-content .container .content-right .side-post .slider {
+          width: 100%;
+          overflow: hidden; }
+          section.view-holder .view .blog .blog-content .container .content-right .side-post .slider .move {
+            position: relative;
+            left: 0;
+            width: 300%;
+            margin: 0; }
+            section.view-holder .view .blog .blog-content .container .content-right .side-post .slider .move a {
+              float: left;
+              width: 33.33%;
+              height: auto; }
