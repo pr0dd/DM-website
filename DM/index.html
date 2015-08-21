@@ -15,12 +15,12 @@
   <link rel="stylesheet" type="text/css" href="css/main.css"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
 </head>
-<body>
+<body ng-controller="indexCtrl">
   <div class="wrapper">
   	<header class="row" ng-include="'partials/header.html'"></header>
   	
   	<section class="view-holder row">
-  		<div class="view row" ng-view></div><!-- set min-height! -->
+  		<div class="view row" ng-view onload="onViewLoad()"></div><!-- set min-height! -->
   	</section>
   	
   	<div class="push"></div>

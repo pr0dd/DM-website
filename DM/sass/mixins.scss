@@ -11,6 +11,13 @@
 }
 
 //Breakpoints
+
+@mixin bp-xxlarge {
+  @media only screen and (min-width: 1500px) {
+    @content;
+  }
+}
+
 @mixin bp-xlarge {
   @media only screen and (min-width: 1300px) {
     @content;

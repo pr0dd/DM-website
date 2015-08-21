@@ -301,11 +301,12 @@ section.view-holder {
 						}
 						@extend %clearfix;
 						h2 {color:#D52B1E;margin-top:0;}
-						a {
+						a {							
 							margin-right:30px;
-							@include transition(.5s ease all);
-							&:hover {@include opacity(.75)}
+							@include transition(.4s ease all);
+							&:hover {@include opacity(.65)}
 							@include bp-xlarge {float:left;}
+							img { @include box-shadow; }
 						}						
 					}
 				}
@@ -564,20 +565,19 @@ section.view-holder {
 					padding-top:15px;
 					padding-bottom:30px;
 					img, video {max-width:100%; height:auto;}
+					.date {color:#404040;}
 					.content-left {
-						outline: 1px solid red;//remove
 						@include bp-medium {float:left; width:70%;}
 						.article {
 							@extend %clearfix;
-							//position:relative;
-							border:1px solid black;
-							padding:10px;
+							//border:1px solid #888;
+							padding:15px;
 							margin-bottom: 20px;
+							@include box-shadow;
 							a {
 								color:#000;
 								h3 {margin:10px 0 0;}
 							}
-							.date {color:#404040;}
 							.article-content {
 								padding-right:20px;
 								@include bp-medium {float:left; width:50%;} 
@@ -591,7 +591,7 @@ section.view-holder {
 							}
 							span {
 								display: block;
-								text-align: left;
+								text-align: right;
 								.button {
 									margin:15px 0 20px;
 									padding:5px 15px;
@@ -606,36 +606,90 @@ section.view-holder {
 						}
 					}
 					.content-right {
-						outline: 1px solid red; //remove
 						@include bp-medium {float:left; width:30%;}
-						.side-post {
-							outline: 1px solid black;
+						.side-post {							
 							padding:10px;
-							@include bp-medium {padding-left: 30px;}
-							@include bp-xmedium {padding-left: 50px;}
-							@include bp-large {padding-left: 30px;}
-							@include bp-xlarge {padding-left: 70px;}
+							margin-bottom: 20px;
+							@include box-shadow;
+							@include bp-medium {margin-left: 30px;}
+							@include bp-xmedium {margin-left: 50px;}
+							@include bp-large {margin-left: 30px;}
+							@include bp-xlarge {margin-left: 70px;}
 							h3 {
 								border-bottom:1px solid black;
-								padding-bottom:5px;
+								padding-bottom:10px;
 								margin:10px 0 0;
 							}
-							.slider {
-								width: 100%;						
+							.slider {	
+								padding-top:10px;				
 								overflow: hidden;
-								//outline: 1px solid red;
 								.move {
 									position:relative;
 									left:0;
 									width:300%;
 									@extend %clearfix;
 									margin: 0;
-									//outline: 1px solid blue;
 									a {
+										color:#000;
 										float:left;
 										width: 33.33%;
-										height: auto;			
+										height: auto;
+										@include transition (.5s ease all);
+										&:hover {
+											@include opacity(.7);
+										}			
 									}
+								}
+							}
+							div.recent {
+								overflow: hidden;
+								margin-bottom:10px;
+								a {
+									float:left;
+									width: 100%;
+									color: #000;
+									@include transition (.5s ease all);
+									&:hover {
+										@include opacity(.7);
+									}
+									div {
+										width: 50%;
+										margin-right: 10px;
+										float:left;
+										@include bp-medium {
+											width: 100%;
+											margin: 0;
+										}
+										@include bp-xxlarge {
+											width: 40%;
+											margin-right: 10px;
+										}										
+									}
+								}
+								h4 {margin:0; padding:10px 0 5px;}
+								p {margin:0; padding:5px 0;}
+							}
+							.search {
+								overflow: hidden;
+								a {
+									float:left;
+									margin-top: 20px;
+									color:#000;
+									padding:5px;
+									@include bp-large {font-size:80%;}
+									@include bp-xlarge {font-size:90%;}
+									@include bp-xxlarge {font-size:100%;}
+									@include transition(.4s ease all);
+									&:hover {color:#D52B1E;}
+								}
+							}
+							.social {
+								overflow: hidden;
+								a {
+									float:left;
+									margin: 15px 15px 0 0;
+									@include transition(.4s ease all);
+									&:hover { @include opacity(.7) }
 								}
 							}
 						}

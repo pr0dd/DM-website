@@ -10,22 +10,20 @@
 		<div class="container">
 		  	<!-- MAIN CONTENT -->
 			<div class="content-left">
-				<div class="article" ng-repeat="article in articles | limitTo:counter">
-					<a ng-href="#/{{article.id}}"><h3>{{article.topic}}</h3></a>
-					<p class="date">{{article.date}}</p>
 
-					<div class="article-content">
-						<a ng-href="#/{{article.id}}" ng-show="article.showImg">
-							<img ng-src="images/{{article.thumb}}">
-						</a>
-						<video id="player" controls poster="{{article.poster}}" ng-src="{{article.videoPath}}" ng-show="article.showVid">
+				<div class="article">
+					<h3>{{articles[1].topic}}</h3>
+					<p class="date">{{articles[1].date}}</p>
+					<p class="text">{{articles[1].text}}</p>
+					<div class="article-content" style="width:100%; float:none;">
+						<img ng-src="images/{{articles[1].full}}" ng-show="articles[1].showImg">
+
+						<video id="player" controls poster="{{articles[1].poster}}" ng-src="{{articles[1].videoPath}}" ng-show="articles[1].showVid">
 							<p>Sorry. Video cannot be displayed</p> 	
-					  </video>
-					</div>
-
-				  <p class="text">{{article.text}}</p>
-				  <span><a ng-href="#/{{article.id}}" class="button">Read more</a></span>					
+					 	</video>
+					</div>				
 				</div>
+
 			</div>
 				<!--SECONDARY CONTENT-->
 			<div class="content-right">

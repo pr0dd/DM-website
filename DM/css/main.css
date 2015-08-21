@@ -332,17 +332,19 @@ section.view-holder {
         margin-top: 0; }
       section.view-holder .view .home .main-article .container .art-right a {
         margin-right: 30px;
-        -webkit-transition: 0.5s ease all;
-        -moz-transition: 0.5s ease all;
-        -ms-transition: 0.5s ease all;
-        -o-transition: 0.5s ease all;
-        transition: 0.5s ease all; }
+        -webkit-transition: 0.4s ease all;
+        -moz-transition: 0.4s ease all;
+        -ms-transition: 0.4s ease all;
+        -o-transition: 0.4s ease all;
+        transition: 0.4s ease all; }
         section.view-holder .view .home .main-article .container .art-right a:hover {
-          opacity: 0.75;
-          filter: alpha(opacity=75); }
+          opacity: 0.65;
+          filter: alpha(opacity=65); }
         @media only screen and (min-width: 1300px) {
           section.view-holder .view .home .main-article .container .art-right a {
             float: left; } }
+        section.view-holder .view .home .main-article .container .art-right a img {
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19); }
   section.view-holder .view .services {
     background-color: #D0E69C; }
     section.view-holder .view .services .serv-heading {
@@ -616,81 +618,156 @@ section.view-holder {
     section.view-holder .view .blog .blog-content .container img, section.view-holder .view .blog .blog-content .container video {
       max-width: 100%;
       height: auto; }
-    section.view-holder .view .blog .blog-content .container .content-left {
-      outline: 1px solid red; }
+    section.view-holder .view .blog .blog-content .container .date {
+      color: #404040; }
+    @media only screen and (min-width: 601px) {
+      section.view-holder .view .blog .blog-content .container .content-left {
+        float: left;
+        width: 70%; } }
+    section.view-holder .view .blog .blog-content .container .content-left .article {
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19); }
+      section.view-holder .view .blog .blog-content .container .content-left .article a {
+        color: #000; }
+        section.view-holder .view .blog .blog-content .container .content-left .article a h3 {
+          margin: 10px 0 0; }
+      section.view-holder .view .blog .blog-content .container .content-left .article .article-content {
+        padding-right: 20px; }
+        @media only screen and (min-width: 601px) {
+          section.view-holder .view .blog .blog-content .container .content-left .article .article-content {
+            float: left;
+            width: 50%; } }
+      section.view-holder .view .blog .blog-content .container .content-left .article .text:after {
+        content: " ";
+        display: table;
+        clear: both; }
+      section.view-holder .view .blog .blog-content .container .content-left .article span {
+        display: block;
+        text-align: right; }
+        section.view-holder .view .blog .blog-content .container .content-left .article span .button {
+          margin: 15px 0 20px;
+          padding: 5px 15px;
+          background-color: #D52B1E;
+          color: #eee;
+          -webkit-transition: 0.5s ease all;
+          -moz-transition: 0.5s ease all;
+          -ms-transition: 0.5s ease all;
+          -o-transition: 0.5s ease all;
+          transition: 0.5s ease all; }
+          section.view-holder .view .blog .blog-content .container .content-left .article span .button:hover {
+            background-color: #000; }
+    @media only screen and (min-width: 601px) {
+      section.view-holder .view .blog .blog-content .container .content-right {
+        float: left;
+        width: 30%; } }
+    section.view-holder .view .blog .blog-content .container .content-right .side-post {
+      padding: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19); }
       @media only screen and (min-width: 601px) {
-        section.view-holder .view .blog .blog-content .container .content-left {
-          float: left;
-          width: 70%; } }
-      section.view-holder .view .blog .blog-content .container .content-left .article {
-        border: 1px solid black;
-        padding: 10px;
-        margin-bottom: 20px; }
-        section.view-holder .view .blog .blog-content .container .content-left .article a {
-          color: #000; }
-          section.view-holder .view .blog .blog-content .container .content-left .article a h3 {
-            margin: 10px 0 0; }
-        section.view-holder .view .blog .blog-content .container .content-left .article .date {
-          color: #404040; }
-        section.view-holder .view .blog .blog-content .container .content-left .article .article-content {
-          padding-right: 20px; }
-          @media only screen and (min-width: 601px) {
-            section.view-holder .view .blog .blog-content .container .content-left .article .article-content {
-              float: left;
-              width: 50%; } }
-        section.view-holder .view .blog .blog-content .container .content-left .article .text:after {
-          content: " ";
-          display: table;
-          clear: both; }
-        section.view-holder .view .blog .blog-content .container .content-left .article span {
-          display: block;
-          text-align: left; }
-          section.view-holder .view .blog .blog-content .container .content-left .article span .button {
-            margin: 15px 0 20px;
-            padding: 5px 15px;
-            background-color: #D52B1E;
-            color: #eee;
+        section.view-holder .view .blog .blog-content .container .content-right .side-post {
+          margin-left: 30px; } }
+      @media only screen and (min-width: 800px) {
+        section.view-holder .view .blog .blog-content .container .content-right .side-post {
+          margin-left: 50px; } }
+      @media only screen and (min-width: 990px) {
+        section.view-holder .view .blog .blog-content .container .content-right .side-post {
+          margin-left: 30px; } }
+      @media only screen and (min-width: 1300px) {
+        section.view-holder .view .blog .blog-content .container .content-right .side-post {
+          margin-left: 70px; } }
+      section.view-holder .view .blog .blog-content .container .content-right .side-post h3 {
+        border-bottom: 1px solid black;
+        padding-bottom: 10px;
+        margin: 10px 0 0; }
+      section.view-holder .view .blog .blog-content .container .content-right .side-post .slider {
+        padding-top: 10px;
+        overflow: hidden; }
+        section.view-holder .view .blog .blog-content .container .content-right .side-post .slider .move {
+          position: relative;
+          left: 0;
+          width: 300%;
+          margin: 0; }
+          section.view-holder .view .blog .blog-content .container .content-right .side-post .slider .move a {
+            color: #000;
+            float: left;
+            width: 33.33%;
+            height: auto;
             -webkit-transition: 0.5s ease all;
             -moz-transition: 0.5s ease all;
             -ms-transition: 0.5s ease all;
             -o-transition: 0.5s ease all;
             transition: 0.5s ease all; }
-            section.view-holder .view .blog .blog-content .container .content-left .article span .button:hover {
-              background-color: #000; }
-    section.view-holder .view .blog .blog-content .container .content-right {
-      outline: 1px solid red; }
-      @media only screen and (min-width: 601px) {
-        section.view-holder .view .blog .blog-content .container .content-right {
+            section.view-holder .view .blog .blog-content .container .content-right .side-post .slider .move a:hover {
+              opacity: 0.7;
+              filter: alpha(opacity=70); }
+      section.view-holder .view .blog .blog-content .container .content-right .side-post div.recent {
+        overflow: hidden;
+        margin-bottom: 10px; }
+        section.view-holder .view .blog .blog-content .container .content-right .side-post div.recent a {
           float: left;
-          width: 30%; } }
-      section.view-holder .view .blog .blog-content .container .content-right .side-post {
-        outline: 1px solid black;
-        padding: 10px; }
-        @media only screen and (min-width: 601px) {
-          section.view-holder .view .blog .blog-content .container .content-right .side-post {
-            padding-left: 30px; } }
-        @media only screen and (min-width: 800px) {
-          section.view-holder .view .blog .blog-content .container .content-right .side-post {
-            padding-left: 50px; } }
-        @media only screen and (min-width: 990px) {
-          section.view-holder .view .blog .blog-content .container .content-right .side-post {
-            padding-left: 30px; } }
-        @media only screen and (min-width: 1300px) {
-          section.view-holder .view .blog .blog-content .container .content-right .side-post {
-            padding-left: 70px; } }
-        section.view-holder .view .blog .blog-content .container .content-right .side-post h3 {
-          border-bottom: 1px solid black;
-          padding-bottom: 5px;
-          margin: 10px 0 0; }
-        section.view-holder .view .blog .blog-content .container .content-right .side-post .slider {
           width: 100%;
-          overflow: hidden; }
-          section.view-holder .view .blog .blog-content .container .content-right .side-post .slider .move {
-            position: relative;
-            left: 0;
-            width: 300%;
-            margin: 0; }
-            section.view-holder .view .blog .blog-content .container .content-right .side-post .slider .move a {
-              float: left;
-              width: 33.33%;
-              height: auto; }
+          color: #000;
+          -webkit-transition: 0.5s ease all;
+          -moz-transition: 0.5s ease all;
+          -ms-transition: 0.5s ease all;
+          -o-transition: 0.5s ease all;
+          transition: 0.5s ease all; }
+          section.view-holder .view .blog .blog-content .container .content-right .side-post div.recent a:hover {
+            opacity: 0.7;
+            filter: alpha(opacity=70); }
+          section.view-holder .view .blog .blog-content .container .content-right .side-post div.recent a div {
+            width: 50%;
+            margin-right: 10px;
+            float: left; }
+            @media only screen and (min-width: 601px) {
+              section.view-holder .view .blog .blog-content .container .content-right .side-post div.recent a div {
+                width: 100%;
+                margin: 0; } }
+            @media only screen and (min-width: 1500px) {
+              section.view-holder .view .blog .blog-content .container .content-right .side-post div.recent a div {
+                width: 40%;
+                margin-right: 10px; } }
+        section.view-holder .view .blog .blog-content .container .content-right .side-post div.recent h4 {
+          margin: 0;
+          padding: 10px 0 5px; }
+        section.view-holder .view .blog .blog-content .container .content-right .side-post div.recent p {
+          margin: 0;
+          padding: 5px 0; }
+      section.view-holder .view .blog .blog-content .container .content-right .side-post .search {
+        overflow: hidden; }
+        section.view-holder .view .blog .blog-content .container .content-right .side-post .search a {
+          float: left;
+          margin-top: 20px;
+          color: #000;
+          padding: 5px;
+          -webkit-transition: 0.4s ease all;
+          -moz-transition: 0.4s ease all;
+          -ms-transition: 0.4s ease all;
+          -o-transition: 0.4s ease all;
+          transition: 0.4s ease all; }
+          @media only screen and (min-width: 990px) {
+            section.view-holder .view .blog .blog-content .container .content-right .side-post .search a {
+              font-size: 80%; } }
+          @media only screen and (min-width: 1300px) {
+            section.view-holder .view .blog .blog-content .container .content-right .side-post .search a {
+              font-size: 90%; } }
+          @media only screen and (min-width: 1500px) {
+            section.view-holder .view .blog .blog-content .container .content-right .side-post .search a {
+              font-size: 100%; } }
+          section.view-holder .view .blog .blog-content .container .content-right .side-post .search a:hover {
+            color: #D52B1E; }
+      section.view-holder .view .blog .blog-content .container .content-right .side-post .social {
+        overflow: hidden; }
+        section.view-holder .view .blog .blog-content .container .content-right .side-post .social a {
+          float: left;
+          margin: 15px 15px 0 0;
+          -webkit-transition: 0.4s ease all;
+          -moz-transition: 0.4s ease all;
+          -ms-transition: 0.4s ease all;
+          -o-transition: 0.4s ease all;
+          transition: 0.4s ease all; }
+          section.view-holder .view .blog .blog-content .container .content-right .side-post .social a:hover {
+            opacity: 0.7;
+            filter: alpha(opacity=70); }

@@ -31,6 +31,18 @@ app.config(["$routeProvider", function($routeProvider){
 			templateUrl: "partials/blog.html",
 			controller: "blogCtrl"
 		})
+		.when("/post-01", {
+			templateUrl: "partials/post-01.html",
+			controller: "blogCtrl"
+		})
+		.when("/post-02", {
+			templateUrl: "partials/post-02.html",
+			controller: "blogCtrl"
+		})
+		.when("/post-03", {
+			templateUrl: "partials/post-03.html",
+			controller: "blogCtrl"
+		})
 		.otherwise({
 			redirectTo: "/"
 		});
