@@ -3,12 +3,12 @@
 /*STICKY FOOTER*/
 .wrapper {
 	min-height: 100%;
-	margin: 0 auto -548px;
-	@include bp-medium {margin-bottom:-303px;} 
+	margin: 0 auto -520px;
+	@include bp-medium {margin-bottom:-280px;} 
 }
 footer, .push {
-	height: 548px;
-	@include bp-medium {height:303px;}  
+	height: 520px;
+	@include bp-medium {height:280px;}  
 }
 
 /*GENERIC STYLES*/
@@ -98,6 +98,7 @@ header {
 						color:#D52B1E;
 					}
 				}
+				a.active {color:#D52B1E;}
 				button {
 					position:absolute;
 					top:0;
@@ -620,25 +621,14 @@ section.view-holder {
 								padding-bottom:10px;
 								margin:10px 0 0;
 							}
-							.slider {	
-								padding-top:10px;				
-								overflow: hidden;
-								.move {
-									position:relative;
-									left:0;
-									width:300%;
-									@extend %clearfix;
-									margin: 0;
-									a {
-										color:#000;
-										float:left;
-										width: 33.33%;
-										height: auto;
-										@include transition (.5s ease all);
-										&:hover {
-											@include opacity(.7);
-										}			
-									}
+							.bestpost {	
+								padding-top:10px;
+								a {
+									color:#000;
+									@include transition (.5s ease all);
+									&:hover {
+										@include opacity(.7);
+									}			
 								}
 							}
 							div.recent {

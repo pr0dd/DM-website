@@ -1,51 +1,59 @@
 var app = angular.module("app", [
-	"ngRoute", 
+	"ui.router", 
 	"ngAnimate", 
 	"appDirs", 
 	"appCtrls"
 ]);
 
-app.config(["$routeProvider", function($routeProvider){
-	$routeProvider
-		.when("/", {
+app.config(["$urlRouterProvider", "$stateProvider", function($urlRouterProvider, $stateProvider){
+	$urlRouterProvider.otherwise("/");
+	$stateProvider
+		.state("/", {
+			url: "/",
 			templateUrl: "partials/home.html",
 			controller: "homeCtrl"
 		})
-		.when("/services", {
+		.state("services", {
+			url: "/services",
 			templateUrl: "partials/services.html",
 			controller: "servicesCtrl"
 		})
-		.when("/work", {
+		.state("work", {
+			url: "/work",
 			templateUrl: "partials/work.html",
 			controller: "workCtrl"
 		})
-		.when("/about", {
+		.state("about", {
+			url: "/about",
 			templateUrl: "partials/about.html",
 			controller: "aboutCtrl"
 		})
-		.when("/contacts", {
+		.state("contacts", {
+			url: "/contacts",
 			templateUrl: "partials/contacts.html",
 			controller: "contactsCtrl"
 		})
-		.when("/blog", {
+		.state("blog", {
+			url: "/blog",
 			templateUrl: "partials/blog.html",
 			controller: "blogCtrl"
 		})
-		.when("/post-01", {
+		.state("post-01", {
+			url: "/post-01",
 			templateUrl: "partials/post-01.html",
 			controller: "blogCtrl"
 		})
-		.when("/post-02", {
+		.state("post-02", {
+			url: "/post-02",
 			templateUrl: "partials/post-02.html",
 			controller: "blogCtrl"
 		})
-		.when("/post-03", {
+		.state("post-03", {
+			url: "/post-03",
 			templateUrl: "partials/post-03.html",
 			controller: "blogCtrl"
-		})
-		.otherwise({
-			redirectTo: "/"
 		});
+
 }]);
 
 app.filter('reverse', function() {

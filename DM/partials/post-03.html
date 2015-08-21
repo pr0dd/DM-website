@@ -30,29 +30,19 @@
 					<!-- 1st side post -->
 				<div class="side-post">
 					<h3>Featured Posts</h3>
-					<div class="slider">
-						<div class="move">
-							<a ng-href="#/{{article.id}}" ng-repeat="article in articles | limitTo:2">
-								<div>
-									<img ng-src="images/{{article.thumb}}" ng-show="article.showImg">
-									<video id="player" poster="{{article.poster}}" ng-src="{{article.videoPath}}" ng-show="article.showVid">
-										<p>Sorry. Video cannot be displayed</p> 	
-								  </video>
-								  <h4>{{article.topic}}</h4>
-								  <p class="date">{{article.date}}</p>
-								</div>
-							</a>
-							<a ng-href="#/{{articles[0].id}}"> <!--First post (to finish the cycle)-->
-								<div>
-									<img ng-src="images/{{articles[0].thumb}}" ng-show="articles[0].showImg">
-									<video id="player" poster="{{articles[0].poster}}" ng-src="{{articles[0].videoPath}}" ng-show="articles[0].showVid">
-										<p>Sorry. Video cannot be displayed</p> 	
-								  </video>
-								  <h4>{{articles[0].topic}}</h4>
-								  <p class="date">{{articles[0].date}}</p>
-								</div>
-							</a>
-						</div>
+					<div class="bestpost">
+
+						<a ng-href="#/{{articles[0].id}}">
+							<div>
+								<img ng-src="images/{{articles[0].thumb}}" ng-show="articles[0].showImg">
+								<video id="player" poster="{{articles[0].poster}}" ng-src="{{articles[0].videoPath}}" ng-show="articles[0].showVid">
+									<p>Sorry. Video cannot be displayed</p> 	
+							  </video>
+							  <h4>{{articles[0].topic}}</h4>
+							  <p class="date">{{articles[0].date}}</p>
+							</div>
+						</a>
+
 					</div>
 				</div> 
 					<!-- 2nd side post -->
