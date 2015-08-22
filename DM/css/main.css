@@ -1,9 +1,9 @@
-.container, header .container .logo, header .container .topmenu, header .container .topmenu li, footer .container .clients, section.view-holder .view .home .monitor .container .slide-holder .slider .move, section.view-holder .view .home .main-article .container .art-right div, section.view-holder .view .home .main-article .container .art-right, section.view-holder .view .services .serv-info .container div, section.view-holder .view .work .gallery .container .img-wrapper, section.view-holder .view .blog .blog-content .container .content-left .article {
+.container, header .container .logo, header .container .topmenu, header .container .topmenu li, footer .container .clients, section.view-holder .view .home .monitor .container .slide-holder .slider .move, section.view-holder .view .home .main-article .container .art-right, section.view-holder .view .home .main-article .container .art-right div, section.view-holder .view .services .serv-info .container div, section.view-holder .view .work .gallery .container .img-wrapper, section.view-holder .view .blog .blog-content .container .content-left .article {
   *zoom: 1; }
-  .container:before, header .container .logo:before, header .container .topmenu:before, header .container .topmenu li:before, footer .container .clients:before, section.view-holder .view .home .monitor .container .slide-holder .slider .move:before, section.view-holder .view .home .main-article .container .art-right div:before, section.view-holder .view .home .main-article .container .art-right:before, section.view-holder .view .services .serv-info .container div:before, section.view-holder .view .work .gallery .container .img-wrapper:before, section.view-holder .view .blog .blog-content .container .content-left .article:before, .container:after, header .container .logo:after, header .container .topmenu:after, header .container .topmenu li:after, footer .container .clients:after, section.view-holder .view .home .monitor .container .slide-holder .slider .move:after, section.view-holder .view .home .main-article .container .art-right div:after, section.view-holder .view .home .main-article .container .art-right:after, section.view-holder .view .services .serv-info .container div:after, section.view-holder .view .work .gallery .container .img-wrapper:after, section.view-holder .view .blog .blog-content .container .content-left .article:after {
+  .container:before, header .container .logo:before, header .container .topmenu:before, header .container .topmenu li:before, footer .container .clients:before, section.view-holder .view .home .monitor .container .slide-holder .slider .move:before, section.view-holder .view .home .main-article .container .art-right:before, section.view-holder .view .home .main-article .container .art-right div:before, section.view-holder .view .services .serv-info .container div:before, section.view-holder .view .work .gallery .container .img-wrapper:before, section.view-holder .view .blog .blog-content .container .content-left .article:before, .container:after, header .container .logo:after, header .container .topmenu:after, header .container .topmenu li:after, footer .container .clients:after, section.view-holder .view .home .monitor .container .slide-holder .slider .move:after, section.view-holder .view .home .main-article .container .art-right:after, section.view-holder .view .home .main-article .container .art-right div:after, section.view-holder .view .services .serv-info .container div:after, section.view-holder .view .work .gallery .container .img-wrapper:after, section.view-holder .view .blog .blog-content .container .content-left .article:after {
     content: " ";
     display: table; }
-  .container:after, header .container .logo:after, header .container .topmenu:after, header .container .topmenu li:after, footer .container .clients:after, section.view-holder .view .home .monitor .container .slide-holder .slider .move:after, section.view-holder .view .home .main-article .container .art-right div:after, section.view-holder .view .home .main-article .container .art-right:after, section.view-holder .view .services .serv-info .container div:after, section.view-holder .view .work .gallery .container .img-wrapper:after, section.view-holder .view .blog .blog-content .container .content-left .article:after {
+  .container:after, header .container .logo:after, header .container .topmenu:after, header .container .topmenu li:after, footer .container .clients:after, section.view-holder .view .home .monitor .container .slide-holder .slider .move:after, section.view-holder .view .home .main-article .container .art-right:after, section.view-holder .view .home .main-article .container .art-right div:after, section.view-holder .view .services .serv-info .container div:after, section.view-holder .view .work .gallery .container .img-wrapper:after, section.view-holder .view .blog .blog-content .container .content-left .article:after {
     clear: both; }
 
 /*STICKY FOOTER*/
@@ -47,9 +47,9 @@ p {
 
 /*HEADER*/
 header {
+  color: #eee;
   background-color: #000;
-  border-bottom: 2px solid #fff;
-  color: #eee; }
+  border-bottom: 2px solid #fff; }
   header .container {
     padding: 0 15px 5px; }
     header .container .logo {
@@ -82,12 +82,12 @@ header {
         -ms-transition: 0.2s ease all;
         -o-transition: 0.2s ease all;
         transition: 0.2s ease all; }
-        header .container .logo button:hover {
-          opacity: 0.8;
-          filter: alpha(opacity=80); }
         @media only screen and (min-width: 601px) {
           header .container .logo button {
             display: none; } }
+        header .container .logo button:hover {
+          opacity: 0.8;
+          filter: alpha(opacity=80); }
     @media only screen and (min-width: 990px) {
       header .container .topmenu {
         float: left;
@@ -103,6 +103,9 @@ header {
       @media only screen and (min-width: 990px) {
         header .container .topmenu li {
           margin-top: 57px; } }
+      header .container .topmenu li:hover ul {
+        opacity: 1;
+        filter: alpha(opacity=100); }
       header .container .topmenu li a {
         display: block;
         width: 100%;
@@ -138,20 +141,17 @@ header {
         display: none; }
         @media only screen and (min-width: 601px) {
           header .container .topmenu li ul {
+            display: block;
             opacity: 0;
             filter: alpha(opacity=0);
             -webkit-transition: 0.5s ease all;
             -moz-transition: 0.5s ease all;
             -ms-transition: 0.5s ease all;
             -o-transition: 0.5s ease all;
-            transition: 0.5s ease all;
-            display: block; } }
+            transition: 0.5s ease all; } }
         header .container .topmenu li ul li {
           width: 100%;
           margin-top: 0; }
-      header .container .topmenu li:hover ul {
-        opacity: 1;
-        filter: alpha(opacity=100); }
 
 /*FOOTER*/
 footer {
@@ -199,8 +199,8 @@ footer {
         footer .container .clients a.hide {
           display: inline-block; } }
   footer .btm-line {
-    background-color: #404040;
-    padding: 7px 0; }
+    padding: 7px 0;
+    background-color: #404040; }
     footer .btm-line .container {
       padding: 0 15px; }
       footer .btm-line .container p {
@@ -222,10 +222,20 @@ section.view-holder {
     -ms-transition: 0.95s ease all;
     -o-transition: 0.95s ease all;
     transition: 0.95s ease all;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
     opacity: 0;
     filter: alpha(opacity=0);
     z-index: 100; }
   section.view-holder .view.ng-enter.ng-enter-active {
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
     opacity: 1;
     filter: alpha(opacity=100); }
   section.view-holder .view.ng-leave {
@@ -234,10 +244,20 @@ section.view-holder {
     -ms-transition: 0.95s ease all;
     -o-transition: 0.95s ease all;
     transition: 0.95s ease all;
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
     opacity: 1;
     filter: alpha(opacity=100);
     z-index: 99; }
   section.view-holder .view.ng-leave.ng-leave-active {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
     opacity: 0;
     filter: alpha(opacity=0); }
   section.view-holder .view .home .monitor {
@@ -276,9 +296,9 @@ section.view-holder {
               width: 20%;
               height: auto; }
       section.view-holder .view .home .monitor .container .heading {
+        color: #eee;
         padding: 10px 0 20px;
-        text-align: center;
-        color: #eee; }
+        text-align: center; }
         @media only screen and (min-width: 601px) {
           section.view-holder .view .home .monitor .container .heading {
             width: 50%;
@@ -339,12 +359,12 @@ section.view-holder {
         -ms-transition: 0.4s ease all;
         -o-transition: 0.4s ease all;
         transition: 0.4s ease all; }
-        section.view-holder .view .home .main-article .container .art-right a:hover {
-          opacity: 0.65;
-          filter: alpha(opacity=65); }
         @media only screen and (min-width: 1300px) {
           section.view-holder .view .home .main-article .container .art-right a {
             float: left; } }
+        section.view-holder .view .home .main-article .container .art-right a:hover {
+          opacity: 0.65;
+          filter: alpha(opacity=65); }
         section.view-holder .view .home .main-article .container .art-right a img {
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19); }
   section.view-holder .view .services {
@@ -373,8 +393,8 @@ section.view-holder {
         padding-top: 30px;
         padding-bottom: 30px; }
         section.view-holder .view .services .serv-info .container div {
-          padding: 15px;
-          float: left; }
+          float: left;
+          padding: 15px; }
           @media only screen and (min-width: 601px) {
             section.view-holder .view .services .serv-info .container div {
               width: 50%; } }
@@ -531,12 +551,12 @@ section.view-holder {
           section.view-holder .view .contacts .contacts-heading .container h1 {
             font-size: 48px; } }
       section.view-holder .view .contacts .contacts-heading .container a {
+        margin-right: 15px;
         -webkit-transition: 0.3s ease all;
         -moz-transition: 0.3s ease all;
         -ms-transition: 0.3s ease all;
         -o-transition: 0.3s ease all;
-        transition: 0.3s ease all;
-        margin-right: 15px; }
+        transition: 0.3s ease all; }
         section.view-holder .view .contacts .contacts-heading .container a:hover {
           opacity: 0.7;
           filter: alpha(opacity=70); }
@@ -574,8 +594,8 @@ section.view-holder {
       -o-transition: 0.2s ease all;
       transition: 0.2s ease all; }
     section.view-holder .view .contacts .contacts-content .container form .f-button {
-      text-align: right;
       width: 90%;
+      text-align: right;
       margin-bottom: 25px; }
       section.view-holder .view .contacts .contacts-content .container form .f-button button {
         background-color: #000;
@@ -732,9 +752,9 @@ section.view-holder {
         overflow: hidden; }
         section.view-holder .view .blog .blog-content .container .content-right .side-post .search a {
           float: left;
-          margin-top: 20px;
           color: #000;
           padding: 5px;
+          margin-top: 20px;
           -webkit-transition: 0.4s ease all;
           -moz-transition: 0.4s ease all;
           -ms-transition: 0.4s ease all;

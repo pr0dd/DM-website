@@ -12,30 +12,27 @@ footer, .push {
 }
 
 /*GENERIC STYLES*/
-body {overflow-x:hidden;}//super-duper-mega important!!! FINALLY! ^_^
-a {text-decoration: none;}
+body { overflow-x:hidden; }//super-duper-mega important!!! FINALLY! ^_^
+a { text-decoration: none; }
 ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
-p {
-	font-size:80%;
-}
+p { font-size:80%; }
 .container {
-	@extend %clearfix;
 	min-width:300px;
-	//max-width: 860px;
+	padding:0 15px;
+	@extend %clearfix;
 	@include bp-medium {width:94%;}
 	@include bp-large {width:60%;}
-	padding:0 15px;
 }
 
 /*HEADER*/
 header {
+	color: #eee;
 	background-color: #000;
 	border-bottom:2px solid #fff;
-	color: #eee;
 	//Dynamic content styles:
 	.container {
 		padding:0 15px 5px;
@@ -52,9 +49,7 @@ header {
 				margin-top: 25px;
 				font-weight: bold;
 			}
-			.lower {
-				margin: 60px 0 0 10px;
-			}
+			.lower { margin: 60px 0 0 10px;	}
 			button {
 				position: absolute;
 				top:10px;
@@ -65,26 +60,21 @@ header {
 				outline: none;
 				@include border-radius;
 				@include transition(.2s ease all);
-				&:hover{@include opacity(0.80);}
 				@include bp-medium {display:none;}
+				&:hover{@include opacity(0.80);}
 			}
 		}
 		.topmenu {
 			@extend %clearfix;
-			@include bp-large {
-				float:left;
-				width: 56%;
-			}
+			@include bp-large { float:left; width: 56%;	}
 			li {
-				@extend %clearfix;
 				float:left;
 				width:100%;
 				position:relative;
-				@include bp-medium {
-					width:20%;
-					margin-top: 10px;
-				}
-				@include bp-large {margin-top:57px}
+				@extend %clearfix;
+				@include bp-medium { width:20%; margin-top: 10px;	}
+				@include bp-large { margin-top:57px }
+				&:hover ul { @include opacity(1); }
 				a {
 					display: block;
 					width:100%;
@@ -93,12 +83,10 @@ header {
 					border-bottom:1px solid #eee;
 					padding:3px 0;
 					@include transition(.4s ease all);
-					@include bp-medium{border:none;}
-					&:hover {
-						color:#D52B1E;
-					}
+					@include bp-medium{ border:none; }
+					&:hover { color:#D52B1E; }
 				}
-				a.active {color:#D52B1E;}
+				a.active { color:#D52B1E; }
 				button {
 					position:absolute;
 					top:0;
@@ -108,24 +96,16 @@ header {
 					border:0px solid #000;
 					background-color:#000;
 					outline: none;
-					@include bp-medium{
-						display: none;
-					}
+					@include bp-medium{ display: none; }
 				}
 				ul {
 					display: none;
 					@include bp-medium {
+						display: block;
 						@include opacity(0);
 						@include transition(.5s ease all);
-						display: block;
 					}
-					li {
-						width:100%;
-						margin-top:0;
-					}
-				}
-				&:hover ul {
-					@include opacity(1);
+					li { width:100%; margin-top:0; }
 				}
 			}
 		}
@@ -140,10 +120,7 @@ footer {
 	.container {
 		padding: 0 15px 15px;
 		.address, .clients {
-			@include bp-medium {
-				width:50%;
-				float:left;
-			}
+			@include bp-medium { width:50%; float:left; }
 			a {
 				@include transition(.3s ease all);
 				&:hover {@include opacity(0.6)}
@@ -167,8 +144,8 @@ footer {
 		}
 	}
 	.btm-line {
-		background-color: #404040;
 		padding:7px 0;
+		background-color: #404040;
 		.container {
 			padding: 0 15px;
 			p {
@@ -194,22 +171,22 @@ section.view-holder {
 	}
 	.view.ng-enter {
 		@include transition(.95s ease all);
-		//@include transform(translateX(100%));
+		@include transform(translateX(100%));
 		@include opacity(0);
 		z-index: 100;
 	}
 	.view.ng-enter.ng-enter-active {
-		//@include transform(translateX(0%));
+		@include transform(translateX(0%));
 		@include opacity(1);
 	}
 	.view.ng-leave {
 		@include transition(.95s ease all);
-		//@include transform(translateX(0%));
+		@include transform(translateX(0%));
 		@include opacity(1);
 		z-index: 99;
 	}
 	.view.ng-leave.ng-leave-active {
-		//@include transform(translateX(-100%));
+		@include transform(translateX(-100%));
 		@include opacity(0);
 	}
 	//End of Angular's animation
@@ -220,29 +197,25 @@ section.view-holder {
 				background-color:#D52B1E;
 				.container {
 					padding-top:5px;
-					@include bp-medium {padding-top:50px;}
-					//outline: 1px solid green;
+					@include bp-medium { padding-top:50px; }
 					.slide-holder {
 						width: 100%;
 						margin: 0 auto;
 						padding:17px 18px 80px;
-						//outline: 1px solid grey;
 						background:url(../images/monitor.png) no-repeat 0 0;
 						background-size:100% 100%;
-						@include bp-small {width:90%;}
-						@include bp-medium {width:50%; float:left;}
-						@include bp-large {width:40%;}
+						@include bp-small { width:90%; }
+						@include bp-medium { width:50%; float:left; }
+						@include bp-large { width:40%; }
 						.slider {
 							width: 100%;						
 							overflow: hidden;
-							//outline: 1px solid red;
 							.move {
 								position:relative;
 								left:0;
 								width:500%;
-								@extend %clearfix;
 								margin: 0;
-								//outline: 1px solid blue;
+								@extend %clearfix;
 								img {
 									float:left;
 									width: 20%;
@@ -252,33 +225,29 @@ section.view-holder {
 						}
 					}
 					.heading {
-						//outline: 1px solid grey;
+						color:#eee;
 						padding: 10px 0 20px;
 						text-align: center;						
-						color:#eee;
 						@include bp-medium {
 							width:50%; 
 							float:right;
 							padding-left:40px;
 							text-align: left;
 						}
-						@include bp-large {width:60%;}
-						@include bp-xlarge {padding-left:80px;}
+						@include bp-large { width:60%; }
+						@include bp-xlarge { padding-left:80px; }
 						h1 {
 							margin-top:0; 
 							font-weight: bold;
-							@include bp-medium {font-size:42px;margin-bottom:40px;}
-							@include bp-xlarge {font-size:48px;}
+							@include bp-medium { font-size:42px; margin-bottom:40px; }
+							@include bp-xlarge { font-size:48px; }
 						}
 						a {
 							color: #eee;
 							padding:10px 20px;
 							background-color:#000;
 							@include transition(.5s ease all);
-							&:hover {
-								background-color: #fff;
-								color:#000;
-							}
+							&:hover { background-color: #fff; color:#000;	}
 						}
 					}
 				}
@@ -288,27 +257,22 @@ section.view-holder {
 				.container {
 					padding-top:30px;
 					padding-bottom:30px;
-					.art-left,.art-right {
-						@include bp-medium {width:50%;float:left;}
-					}
+					.art-left,.art-right { @include bp-medium {width:50%; float:left;}	}
 					.art-left {
 						padding-right: 30px;
 						h2 { @include bp-medium {margin-bottom:40px;} }
 					}
 					.art-right {
-						div {
-							@extend %clearfix;
-							margin-bottom: 30px;
-						}
 						@extend %clearfix;
-						h2 {color:#D52B1E;margin-top:0;}
+						div {	margin-bottom: 30px; @extend %clearfix;	}
+						h2 { color:#D52B1E; margin-top:0; }
 						a {							
 							margin-right:30px;
 							@include transition(.4s ease all);
-							&:hover {@include opacity(.65)}
-							@include bp-xlarge {float:left;}
+							@include bp-xlarge { float:left; }
+							&:hover { @include opacity(.65) }
 							img { @include box-shadow; }
-						}						
+						}		
 					}
 				}
 			}
@@ -324,10 +288,10 @@ section.view-holder {
 						color:#eee;
 						margin-top:0; 
 						font-weight: bold;
-						@include bp-medium {font-size:42px;}
-						@include bp-xlarge {font-size:48px;}
+						@include bp-medium { font-size:42px; }
+						@include bp-xlarge { font-size:48px; }
 					}
-					p {color:#eee;font-size:110%;}
+					p { color:#eee; font-size:110%; }
 				}
 			}
 			.serv-info {
@@ -336,14 +300,12 @@ section.view-holder {
 					padding-top:30px;
 					padding-bottom:30px;
 					div {
-						@extend %clearfix;
-						padding:15px;
 						float:left;
-						//margin-bottom:15px;
-						//outline: 1px solid grey;
-						@include bp-medium {width:50%;}
-						@include bp-large {width:33.33%;}
-						h3 {color:#D52B1E;margin-top:10px;}			
+						padding:15px;
+						@extend %clearfix;
+						@include bp-medium { width:50%; }
+						@include bp-large { width:33.33%; }
+						h3 { color:#D52B1E; margin-top:10px; }			
 					}
 					.separator-1,.separator-2,.separator-3 {
 							width: 100%;
@@ -353,12 +315,10 @@ section.view-holder {
 							height: 0;
 						}
 					.separator-1,.separator-3 {
-						@include bp-medium {display:block;}
-						@include bp-large {display:none;}
+						@include bp-medium { display:block; }
+						@include bp-large { display:none; }
 					}
-					.separator-2 {
-						@include bp-large {display:block;}
-					}		
+					.separator-2 { @include bp-large {display:block;} }		
 				}
 			}
 		}
@@ -372,10 +332,10 @@ section.view-holder {
 						color:#eee;
 						margin-top:0; 
 						font-weight: bold;
-						@include bp-medium {font-size:42px;}
-						@include bp-xlarge {font-size:48px;}
+						@include bp-medium { font-size:42px; }
+						@include bp-xlarge { font-size:48px; }
 					}
-					p {color:#eee;font-size:110%;}
+					p { color:#eee; font-size:110%; }
 				}
 			}
 			.gallery {
@@ -389,9 +349,9 @@ section.view-holder {
 						.thumb {
 							position:relative;
 							display: inline-block;
-							@include bp-medium {width:33%;}
 							padding-bottom:20px;
-							@include bp-medium {padding-right:20px;}
+							@include bp-medium { width:33%; }
+							@include bp-medium { padding-right:20px; }
 							a {
 								color:#000;
 								img {
@@ -410,7 +370,7 @@ section.view-holder {
 									background-color:#fff;
 									@include transition(.5s ease all);
 									@include opacity(0);
-									&:hover {@include opacity(0.75)}
+									&:hover { @include opacity(0.75) }
 								}
 							}
 						}
@@ -425,10 +385,7 @@ section.view-holder {
 							padding:5px 20px;
 							@include transition(.5s ease all);
 							@include box-shadow;
-							&:hover {
-								background-color:#eee;
-								color:#000;
-							}
+							&:hover { background-color:#eee; color:#000; }
 						}
 					}
 				}
@@ -444,10 +401,10 @@ section.view-holder {
 						color:#eee;
 						margin-top:0; 
 						font-weight: bold;
-						@include bp-medium {font-size:42px;}
-						@include bp-xlarge {font-size:48px;}
+						@include bp-medium { font-size:42px; }
+						@include bp-xlarge { font-size:48px; }
 					}
-					p {color:#eee;font-size:110%;}
+					p { color:#eee; font-size:110%; }
 				}
 			}
 			.about-content {
@@ -455,14 +412,14 @@ section.view-holder {
 					padding-top: 15px;
 					padding-bottom:15px;
 					text-align: center;
-					p {text-align:left;}
+					p { text-align:left; }
 					img {
 						max-width: 100%;
 						height: auto;
+						@include box-shadow;
 						@include bp-xmedium{margin:0 60px 20px 0; float:left;}
 						@include bp-large{margin:0; float:none;}
 						@include bp-xlarge{margin:0 60px 20px 0; float:left;}
-						@include box-shadow;
 					}
 				}
 			}
@@ -477,12 +434,12 @@ section.view-holder {
 						color:#eee;
 						margin-top:0; 
 						font-weight: bold;
-						@include bp-medium {font-size:42px;}
-						@include bp-xlarge {font-size:48px;}
+						@include bp-medium { font-size:42px; }
+						@include bp-xlarge { font-size:48px; }
 					}
 					a {
-						@include transition(.3s ease all);
 						margin-right:15px; 
+						@include transition(.3s ease all);
 						&:hover { @include opacity(.7) };
 					}
 				}
@@ -492,10 +449,7 @@ section.view-holder {
 					padding-top:30px;
 					padding-bottom:30px;
 					form {
-						@include bp-medium{
-							float: left;
-							width: 55%;
-						}
+						@include bp-medium{ float: left; width: 55%; }
 						.f-group {
 							position: relative;
 							margin-top: 15px;
@@ -507,12 +461,9 @@ section.view-holder {
 							display: block;
 							width: 90%;
 							@include box-shadow;
-							&:focus~.f-label, &:valid~.f-label {
-								top:-20px;
-								color:#888;
-							}
+							&:focus~.f-label, &:valid~.f-label { top:-20px; color:#888; }
 						}
-						.f-textarea {max-width:90%;min-width:200px;}
+						.f-textarea { max-width:90%; min-width:200px; }
 						.f-label {
 							position: absolute;
 							left: 5px;
@@ -521,8 +472,8 @@ section.view-holder {
 							@include transition(.2s ease all);
 						}
 						.f-button {
-							text-align: right;
 							width: 90%;
+							text-align: right;
 							margin-bottom: 25px;
 							button {
 								background-color:#000;
@@ -532,16 +483,11 @@ section.view-holder {
 								padding:5px 20px;
 								@include transition(.5s ease all);
 								@include box-shadow;
-								&:hover {
-									background-color:#eee;
-									color:#000;
-								}
+								&:hover { background-color:#eee; color:#000; }
 							}							
 						}
 					}
-					p {
-						@include bp-medium {float:left; width:45%;}
-					}
+					p { @include bp-medium {float:left; width:45%;} }
 				}
 			}
 		}
@@ -555,25 +501,24 @@ section.view-holder {
 						color:#eee;
 						margin-top:0; 
 						font-weight: bold;
-						@include bp-medium {font-size:42px;}
-						@include bp-xlarge {font-size:48px;}
+						@include bp-medium { font-size:42px; }
+						@include bp-xlarge { font-size:48px; }
 					}
-					p {color:#eee;font-size:110%;}
+					p { color:#eee; font-size:110%; }
 				}
 			}
 			.blog-content {
 				.container {
 					padding-top:15px;
 					padding-bottom:30px;
-					img, video {max-width:100%; height:auto;}
-					.date {color:#404040;}
+					img, video { max-width:100%; height:auto; }
+					.date { color:#404040; }
 					.content-left {
-						@include bp-medium {float:left; width:70%;}
+						@include bp-medium { float:left; width:70%; }
 						.article {
-							@extend %clearfix;
-							//border:1px solid #888;
 							padding:15px;
 							margin-bottom: 20px;
+							@extend %clearfix;
 							@include box-shadow;
 							a {
 								color:#000;
@@ -581,7 +526,7 @@ section.view-holder {
 							}
 							.article-content {
 								padding-right:20px;
-								@include bp-medium {float:left; width:50%;} 
+								@include bp-medium { float:left; width:50%; }
 							}
 							.text {
 								&:after {
@@ -599,9 +544,7 @@ section.view-holder {
 									background-color: #D52B1E;
 									color:#eee;
 									@include transition (.5s ease all);
-									&:hover {
-										background-color: #000;
-									}
+									&:hover { background-color: #000; }
 								}								
 							}
 						}
@@ -626,9 +569,7 @@ section.view-holder {
 								a {
 									color:#000;
 									@include transition (.5s ease all);
-									&:hover {
-										@include opacity(.7);
-									}			
+									&:hover { @include opacity(.7);	}			
 								}
 							}
 							div.recent {
@@ -639,38 +580,30 @@ section.view-holder {
 									width: 100%;
 									color: #000;
 									@include transition (.5s ease all);
-									&:hover {
-										@include opacity(.7);
-									}
+									&:hover { @include opacity(.7);	}
 									div {
 										width: 50%;
 										margin-right: 10px;
 										float:left;
-										@include bp-medium {
-											width: 100%;
-											margin: 0;
-										}
-										@include bp-xxlarge {
-											width: 40%;
-											margin-right: 10px;
-										}										
+										@include bp-medium { width: 100%;	margin: 0; }
+										@include bp-xxlarge { width: 40%; margin-right: 10px; }										
 									}
 								}
-								h4 {margin:0; padding:10px 0 5px;}
-								p {margin:0; padding:5px 0;}
+								h4 { margin:0; padding:10px 0 5px; }
+								p { margin:0; padding:5px 0; }
 							}
 							.search {
 								overflow: hidden;
 								a {
 									float:left;
-									margin-top: 20px;
 									color:#000;
 									padding:5px;
-									@include bp-large {font-size:80%;}
-									@include bp-xlarge {font-size:90%;}
-									@include bp-xxlarge {font-size:100%;}
+									margin-top: 20px;
+									@include bp-large { font-size:80%; }
+									@include bp-xlarge { font-size:90%; }
+									@include bp-xxlarge { font-size:100%; }
 									@include transition(.4s ease all);
-									&:hover {color:#D52B1E;}
+									&:hover { color:#D52B1E; }
 								}
 							}
 							.social {

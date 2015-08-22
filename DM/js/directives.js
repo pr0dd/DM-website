@@ -2,6 +2,7 @@ var appDirs = angular.module("appDirs", []);
 
 appDirs.directive("pop", function() {
 	return {
+		//Menu hidden item pop-up
 		link: function(scope,element,attrs){
 						//initialize variables:
 						var hiddenList = $(element).next("ul"),
@@ -18,6 +19,7 @@ appDirs.directive("pop", function() {
 
 appDirs.directive("menuBtn", function() {
 	return {
+		//Menu show-hide button behaviour:
 		link: function(scope,element,attrs){
 						//initialize variables:
 						var btn = $(".logo button"),
@@ -34,21 +36,3 @@ appDirs.directive("menuBtn", function() {
 					}
 	}
 });
-
-// appDirs.directive("hoverImg", function() {
-// 	return {
-// 		link: function(scope,element,attrs){
-// 						//initialize variables:
-// 						var capture = $(element).next(".capture");
-// 						//set event handlers:
-// 						element.on("mouseenter", function(){
-// 							element.animate({opacity:0.2},400);
-// 							capture.css({display:"block"});
-// 						});
-// 						capture.on("mouseleave", function(){
-// 							capture.css({display:"none"});
-// 							element.css({opacity:1});
-// 						});
-// 					}
-// 	}
-// });
